@@ -2936,6 +2936,11 @@ supports-color@^8.0.0:
   dependencies:
     has-flag "^4.0.0"
 
+tailwindcss-writing-mode@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-writing-mode/-/tailwindcss-writing-mode-1.0.0.tgz#687c4d8f4f89dbbf10e38f78134c691d5e6736d8"
+  integrity sha512-w72adZDP4aCCut8gJzVp1Z2Ht55JlY1Q0ZgJULeAbCEUCfkHVJS+ZYlfMXOmflIDNqnOsGizgojXxq87R0kh7g==
+
 tailwindcss@^3.0.5:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.5.tgz#468e20347b8c4b59bb0585361682126edb1dd9e3"
