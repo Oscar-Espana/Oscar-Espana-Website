@@ -15,12 +15,13 @@ const Hero = () => {
             Desarrollador Web
           </span>
         </h1>
-        <button className="mt-14 px-12 py-3 text-xl font-medium text-primary border border-primary rounded-lg cursor-pointer">
+        <button className="mt-14 px-12 py-3 text-xl font-medium text-primary border border-primary rounded-lg cursor-pointer
+          hover:bg-primary hover:text-white ease-in-out duration-700">
           Contáctame
         </button>
         <p
           className="text-[40px] md:text-[54px] lg:text-7xl font-bold text-gray uppercase opacity-[15%] 
-          writing-mode-vertical absolute bottom-12 lg:bottom-10 right-8 lg:right-[120px]"
+          writing-mode-vertical absolute bottom-12 lg:bottom-10 right-8 lg:right-[80px]"
         >
           {"<Developer/>"}
         </p>

@@ -14,21 +14,15 @@ const AboutMe = () => {
           <p className="tag">{"< />"}</p>
           <div className="mt-6 space-y-3 md:mt-8">
             <p>
-              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt
-              qui esse pariatur duis deserunt mollit dolore cillum minim tempor
-              enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut
-              voluptate aute id deserunt nisi.
+              A lo largo de 2 años he sido participe del desarrollo de aplicaciones tanto para Frontend y Backend, especializandome en tecnologías web.
             </p>
             <p>
-              Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt
-              qui esse pariatur duis deserunt mollit dolore cillum minim tempor
-              enim. Aliqua id fugiat nostrud irure ex duis ea quis id quis ad
-              et. Sunt qui esse pariatur duis deserunt mollit dolore cillum
-              minim tempor enim.
+              He realizado aplicaciones web y móviles para Android y iOS usando tecnologías actuales como React, React Native, Flutter, de la mano con las necesidades del usuario.
             </p>
+            <p>Además del desarrollo web tengo experiencia en el diseño de interfaces web y móviles usando FIGMA,</p>
           </div>
         </div>
-        <div className="col-span-12 md:col-start-7 mt-6 md:mt-0 md:col-span-6 relative flex flex-col justify-center">
+        <div className="col-span-12 md:col-start-7 mt-6 md:mt-0 md:col-span-6 flex flex-col justify-center">
           <Image
             src="/img/2x/about-me@2x.png"
             alt="Acerca de mi"
@@ -36,6 +30,8 @@ const AboutMe = () => {
             height={466}
             layout="responsive"
             quality={100}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN88B8AAsUB4ZtvXtIAAAAASUVORK5CYII="
           />
         </div>
       </div>
