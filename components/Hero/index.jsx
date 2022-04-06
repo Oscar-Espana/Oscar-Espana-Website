@@ -5,53 +5,27 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
   const heroSection = useRef(null);
-  const developerRef = useRef(null);
 
   useEffect(() => {
-    // const element = developerRef.current;
-    // gsap.to(element, {
-    //   y: 500,
-    //   duration: 4,
-    //   ease: "inOut",
-    //   scrollTrigger: {
-    //     trigger: "#hero",
-    //     markers: true,
-    //     start: "top top",
-    //     end: "bottom center",
-    //     scrub: true,
-    //   },
-    // });
-
-    const hero = heroSection.current;
-    const heroTexts = gsap.utils.toArray(`#hero h1 span`);
-
-    heroTexts.forEach((text) => {
-      gsap.from(text, {
-        scrollTrigger: hero,
-        autoAlpha: 0,
-        y: 50,
-        duration: 1.25,
-        stagger: 0.25,
-        scrub: true,
-      });
-    });
-    console.log(heroTexts);
-    gsap.to(hero, {
-      className: "bg-white text-black",
-      duration: 4,
-      ease: "inOut",
+    gsap.to("#hero div", {
       scrollTrigger: {
-        trigger: "#hero",
-        markers: true,
-        start: "center center",
+        trigger: heroSection.current,
+        start: "top+=35% top",
         end: "bottom center",
         scrub: true,
       },
+      background: "#f8f8f8",
+      duration: 5,
+      ease: "power2.inOut",
     });
   }, []);
 
   return (
-    <section ref={heroSection} id="hero" className="bg-black text-white">
+    <section
+      ref={heroSection}
+      id="hero"
+      className="bg-black text-white transition-colors ease-in-out duration-500"
+    >
       <div className="container pt-40 pb-56 relative">
         <h1 className="flex flex-col uppercase">
           <span
@@ -77,7 +51,6 @@ const Hero = () => {
           Contáctame
         </button>
         <p
-          ref={developerRef}
           className="text-[40px] md:text-[54px] lg:text-7xl font-bold text-gray uppercase opacity-[15%] 
           writing-mode-vertical absolute bottom-12 lg:bottom-10 right-8 lg:right-[80px]"
         >
