@@ -2,6 +2,7 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
+import Animated from "../components/Animated";
 
 export default function Home() {
   return (
@@ -15,12 +16,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Skills />
-      <div
-        id="Welcome"
-        className="h-96 w-full bg-gray flex justify-center items-center"
-      >
-        Welcome
-      </div>
+      <Animated />
     </div>
   );
 }
