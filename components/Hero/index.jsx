@@ -7,15 +7,16 @@ const Hero = () => {
   const heroSection = useRef(null);
 
   useEffect(() => {
-    gsap.to("#hero div", {
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: heroSection.current,
-        start: "top+=35% top",
-        end: "bottom center",
-        scrub: true,
+        start: "center top",
+        end: "bottom-=10% top",
+        scrub: 0.5,
       },
+    });
+    tl.to("#hero div", {
       background: "#f8f8f8",
-      duration: 5,
       ease: "power2.inOut",
     });
   }, []);
