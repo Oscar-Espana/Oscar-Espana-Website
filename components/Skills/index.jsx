@@ -6,7 +6,7 @@ import { useWindowResize } from "../../hooks/useWindowsResize";
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
-  const [width, height] = useWindowResize();
+  const { width, height } = useWindowResize();
 
   const skillsSectionRef = useRef(null);
   const skillsRef = useRef(null);
@@ -17,6 +17,7 @@ const Skills = () => {
   }, [width, height]);
 
   useEffect(() => {
+    console.log("response---");
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: skillsSectionRef.current,
@@ -26,19 +27,20 @@ const Skills = () => {
         start: "top top",
         end: () => "+=100%",
         anticipatePin: 1,
-        // snap: 1 / 3,
+        markers: true,
       },
     });
     tl.to(skillsRef.current, {
-      x: () =>
-        `-${
-          skillsRef.current.clientWidth -
-          skillsSectionRef.current.clientWidth +
-          100
-        }`,
+      x: () => {
+        const skillWidth = skillsRef.current.clientWidth;
+        const sectionWidth = skillsSectionRef.current.clientWidth;
+        const response = skillWidth * 1.05 - sectionWidth;
+        return -response;
+      },
       ease: "back.inOut(1.7)",
     });
-  }, []);
+    tl.scrollTrigger.refresh();
+  }, [width]);
 
   useEffect(() => {
     const tlWelcome = gsap.timeline({
@@ -70,7 +72,7 @@ const Skills = () => {
           ref={skillsRef}
           className=" py-12 md:py-16 relative flex min-w-full w-max justify-center"
         >
-          <p className="text-2xl md:text-4xl lg:text-5xl font-bold ml-4 mr-12  md:ml-20 md:mr-40 text-white">
+          <p className="text-2xl md:text-4xl lg:text-5xl font-bold ml-4 mr-12 md:ml-20 md:mr-40 text-white">
             CREATIVO
           </p>
           <p className="text-2xl md:text-4xl lg:text-5xl font-bold mr-12 md:mr-40 text-white">
