@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Animated from "../components/Animated";
+import AditionalInfo from "../components/AditionalInfo";
 
 export default function Home() {
   return (
@@ -14,8 +15,9 @@ export default function Home() {
       </Head>
 
       <Hero />
-      <AboutMe />
+      <AditionalInfo />
       <Skills />
+      <AboutMe />
       <Animated />
     </div>
   );
