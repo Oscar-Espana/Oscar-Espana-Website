@@ -1,62 +1,32 @@
-import React, { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
+import Image from "next/image";
+import React from "react";
 const Hero = () => {
-  gsap.registerPlugin(ScrollTrigger);
-  const heroSection = useRef(null);
-
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: heroSection.current,
-        start: "center top",
-        end: "bottom-=10% top",
-        scrub: 0.5,
-      },
-    });
-    tl.to("#hero div", {
-      background: "#f8f8f8",
-      ease: "power2.inOut",
-    });
-  }, []);
-
   return (
     <section
-      ref={heroSection}
       id="hero"
-      className="bg-black text-white transition-colors ease-in-out duration-500"
+      className="relative min-h-screen bg-black flex items-center text-white transition-colors ease-in-out duration-500"
     >
-      <div className="container pt-40 pb-56 relative">
-        <h1 className="flex flex-col uppercase">
-          <span
-            data-color="text-primary"
-            className="text-green text-[28px] leading-[1.15] md:text-[38px] lg:text-5xl font-medium"
-          >
-            Hola soy
-          </span>
-          <span
-            data-color="text-gray"
-            className="text-primary text-4xl leading-[1.15] md:text-[54px] lg:text-7xl font-bold lg:py-2"
-          >
+      <div className="container">
+        <h1 className="flex flex-col gap-2 md:gap-3 text-[42px] md:text-[54px] lg:text-[66px] leading-[1.18] font-bold lg:py-2 uppercase ">
+          <span data-color="text-gray" className="text-primary ">
             Oscar España
           </span>
-          <span className="text-4xl leading-[1.15] md:text-[54px] lg:text-7xl font-bold">
-            Desarrollador Web
-          </span>
+          <span>Desarrollador Frontend</span>
         </h1>
         <button
-          className="mt-14 px-12 py-3 text-xl font-medium bg-primary text-white rounded-lg cursor-pointer
-           transition hover:scale-[1.05] hover:after:border-t-white ease-in-out duration-500"
+          className="mt-16 px-12 py-3 text-xl font-semibold bg-primary  text-white rounded-lg cursor-pointer
+           hover:gradient-background"
         >
           Contáctame
         </button>
-        <p
-          className="text-[40px] md:text-[54px] lg:text-7xl font-bold text-gray uppercase opacity-[15%] 
-          writing-mode-vertical absolute bottom-12 lg:bottom-10 right-8 lg:right-[80px]"
-        >
-          {"<Developer/>"}
-        </p>
+      </div>
+      <div className="absolute left-1/2 bottom-8 md:bottom-16  -translate-x-1/2 cursor-pointer opacity-70 hover:opacity-100">
+        <Image
+          src="/iconos/scroll-down.svg"
+          width={56}
+          height={56}
+          alt="Scroll Down"
+        />
       </div>
     </section>
   );

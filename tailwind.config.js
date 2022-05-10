@@ -10,6 +10,7 @@ module.exports = {
       black: "#000000",
       white: "#FFFFFF",
       gray: "#F8F8F8",
+      violet: "#BD4EF4",
     },
     fontFamily: {
       Raleway: ["Raleway", "sans-serif"],
@@ -31,4 +32,4 @@ module.exports = {
       variants: ["responsive", "hover"],
     }),
   ],
-}
+};
