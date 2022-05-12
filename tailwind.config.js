@@ -9,7 +9,7 @@ module.exports = {
       primary: "#E72889",
       black: "#000000",
       white: "#FFFFFF",
-      gray: "#F8F8F8",
+      gray: "#1D2023",
       violet: "#BD4EF4",
     },
     fontFamily: {
