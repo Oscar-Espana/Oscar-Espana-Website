@@ -27,7 +27,7 @@ const AboutMe = () => {
     });
   }, []);
   return (
-    <section id="aboutMe" className="bg-white py-24 md:py-28 lg:py-36">
+    <section id="aboutMe" className="bg-white py-24 md:py-28 lg:py-32">
       <div ref={aboutMeSectionRef} className="container grid grid-cols-12 ">
         <div className="col-span-12 md:col-span-5">
           <h2 ref={titleRef}>
