@@ -4,13 +4,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-    colors: {
-      primary: "#E72889",
-      black: "#000000",
-      white: "#FFFFFF",
-      gray: "#1D2023",
-      violet: "#BD4EF4",
+    extend: {
+      colors: {
+        primary: "#E72889",
+        black: "#000000",
+        white: "#FFFFFF",
+        gray: "#1D2023",
+        violet: "#BD4EF4",
+      },
     },
     fontFamily: {
       Raleway: ["Raleway", "sans-serif"],
