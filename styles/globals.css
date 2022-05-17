@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  * { 
+    @apply selection:bg-primary selection:text-white
+  }
   body {
     @apply font-Raleway;
   }
   h2 {
-    @apply text-[39px] md:text-[48px] lg:text-[56px] font-semibold md:leading-normal;
+    @apply text-[39px] md:text-[48px] lg:text-[56px] font-semibold md:leading-normal selection:bg-primary selection:text-white;
   }
   .tag {
     @apply text-primary text-[28px] md:text-[40px] lg:text-5xl font-medium leading-none;

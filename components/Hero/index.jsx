@@ -8,7 +8,10 @@ const Hero = () => {
     >
       <div className="container">
         <h1 className="flex flex-col gap-2 md:gap-3 text-[36px] md:text-[54px] lg:text-[66px] leading-[1.18] font-bold lg:py-2 uppercase ">
-          <span data-color="text-gray" className="text-primary ">
+          <span
+            data-color="text-gray"
+            className="text-primary selection:bg-white selection:text-primary"
+          >
             Oscar España
           </span>
           <span>Desarrollador Frontend</span>
