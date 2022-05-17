@@ -5,6 +5,7 @@ import Skills from "../components/Skills";
 import Animated from "../components/Animated";
 import AditionalInfo from "../components/AditionalInfo";
 import Technologies from "../components/Technologies";
+import CustomCursor from "../components/CustomCursor";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <CustomCursor />
       <Hero />
       <AditionalInfo />
       <Skills />
