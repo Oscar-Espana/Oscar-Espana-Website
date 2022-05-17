@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 5px solid transparent;
+  background-clip: content-box;
+}
+
 @layer base {
   * { 
     @apply selection:bg-primary selection:text-white
   }
   body {
-    @apply font-Raleway;
+    @apply font-Raleway scrollbar scrollbar-thumb-primary overflow-y-scroll;
   }
   h2 {
     @apply text-[39px] md:text-[48px] lg:text-[56px] font-semibold md:leading-normal selection:bg-primary selection:text-white;
