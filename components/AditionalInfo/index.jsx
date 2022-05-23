@@ -29,36 +29,61 @@ const AditionalInfo = () => {
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": function () {
         services.forEach((service, index) => {
-          gsap
-            .timeline({
+          if (index === 0) {
+            const tl = gsap.timeline({
+              defaults: { ease: "power3.inOut" },
               scrollTrigger: {
-                trigger: "#aboutMe",
-                start: "top top",
-                end: "bottom-=250",
+                trigger: "#aditionalInfo",
+                start: "center center",
+                end: () => "+=100%",
                 scrub: true,
                 id: `service-${index}`,
               },
-            })
-            .from(service, {
-              duration: 0.5,
-              y: -100,
-              opacity: 0,
-              ease: "power3.inOut",
-              delay: index * 0.2,
-            })
-            .to(service, {
-              duration: 1,
-              y: 0,
-              opacity: 1,
-              ease: "power3.inOut",
             });
+            tl.from(service, {
+              y: -100,
+              duration: 4,
+              autoAlpha: 0,
+            }).to(service, {
+              y: -0,
+              duration: 2,
+              autoAlpha: 1,
+            });
+          } else {
+            const tl2 = gsap.timeline({
+              defaults: { ease: "power3.inOut" },
+              scrollTrigger: {
+                trigger: "#aditionalInfo",
+                start: "center top+=150",
+                pin: true,
+                end: () => "+=100%",
+                scrub: true,
+                id: `service-${index}`,
+              },
+            });
+            tl2
+              .from(service, {
+                duration: 2,
+                y: -100,
+                autoAlpha: 0,
+                delay: index * 0.25,
+              })
+              .to(service, {
+                duration: 2,
+                y: 0,
+                autoAlpha: 1,
+              });
+          }
         });
       },
     });
   }, []);
 
   return (
-    <section id="aboutMe" className="bg-black pt-20 md:pt-24 pb-36 text-white">
+    <section
+      id="aditionalInfo"
+      className="bg-black pt-20 md:pt-24 pb-36 text-white"
+    >
       <div className="container">
         <p className="text-[24px] md:text-[32px] font-medium">
           Hola, mi nombre es Oscar España 👋. Soy desarrollador frontend con
