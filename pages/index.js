@@ -2,10 +2,10 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
-import Animated from "../components/Animated";
 import AditionalInfo from "../components/AditionalInfo";
 import Technologies from "../components/Technologies";
 import CustomCursor from "../components/CustomCursor";
+import Portfolio from "../components/Portfolio";
 
 export default function Home() {
   return (
@@ -22,8 +22,7 @@ export default function Home() {
       <Skills />
       <Technologies />
       <AboutMe />
-
-      {/* <Animated /> */}
+      <Portfolio />
     </div>
   );
 }

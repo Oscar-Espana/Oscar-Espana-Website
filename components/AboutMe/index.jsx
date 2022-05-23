@@ -11,18 +11,6 @@ const AboutMe = () => {
   const titleRef = useRef(null);
 
   useEffect(() => {
-    gsap.to(aboutMeRef.current, {
-      scrollTrigger: {
-        trigger: aboutMeRef.current,
-        start: "top+=250 top",
-        end: () => "+=250",
-        scrub: 1,
-      },
-      backgroundColor: "black",
-      color: "white",
-      ease: "circ.out",
-    });
-
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": function () {
         gsap.to(titleRef.current, {
@@ -76,6 +64,7 @@ const AboutMe = () => {
           </div>
 
           <Image
+            className="hover:scale-[1.2] transition-transform duration-300 ease-in-out"
             src="/img/2x/about-me@2x.png"
             alt="Acerca de mi"
             width={590}
