@@ -18,6 +18,9 @@ body::-webkit-scrollbar-thumb {
   h2 {
     @apply text-[39px] md:text-[48px] lg:text-[56px] font-semibold md:leading-normal selection:bg-primary selection:text-white;
   }
+  h3 {
+    @apply text-[36px] md:text-[42px] lg:text-5xl font-semibold;
+  }
   .tag {
     @apply text-primary text-[28px] md:text-[40px] lg:text-5xl font-medium leading-none;
   }
