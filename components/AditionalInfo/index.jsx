@@ -28,52 +28,22 @@ const AditionalInfo = () => {
 
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": function () {
-        services.forEach((service, index) => {
-          if (index === 0) {
-            const tl = gsap.timeline({
-              defaults: { ease: "power3.inOut" },
-              scrollTrigger: {
-                trigger: "#aditionalInfo",
-                start: "center center",
-                end: () => "+=100%",
-                scrub: true,
-                id: `service-${index}`,
-              },
-            });
-            tl.from(service, {
-              y: -100,
-              duration: 4,
-              autoAlpha: 0,
-            }).to(service, {
-              y: -0,
-              duration: 2,
-              autoAlpha: 1,
-            });
-          } else {
-            const tl2 = gsap.timeline({
-              defaults: { ease: "power3.inOut" },
-              scrollTrigger: {
-                trigger: "#aditionalInfo",
-                start: "center top+=150",
-                pin: true,
-                end: () => "+=100%",
-                scrub: true,
-                id: `service-${index}`,
-              },
-            });
-            tl2
-              .from(service, {
-                duration: 2,
-                y: -100,
-                autoAlpha: 0,
-                delay: index * 0.25,
-              })
-              .to(service, {
-                duration: 2,
-                y: 0,
-                autoAlpha: 1,
-              });
-          }
+        gsap.set(services, {
+          autoAlpha: 0,
+          y: -100,
+        });
+        gsap.to("#services div", {
+          scrollTrigger: {
+            trigger: "#aditionalInfo",
+            start: "center top+=25%",
+            pin: true,
+            end: () => "+=100%",
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+          y: 0,
+          autoAlpha: 1,
+          stagger: 0.18,
         });
       },
     });
