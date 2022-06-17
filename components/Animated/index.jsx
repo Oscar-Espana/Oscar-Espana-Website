@@ -41,7 +41,7 @@ const Animated = () => {
     <section
       id="animated"
       ref={containerRef}
-      className="pt-80 pb-80 bg-gray flex items-center justify-center"
+      className="pt-80 pb-80 bg-darkGray flex items-center justify-center"
     >
       <div ref={figureRed} className="w-52 h-52 rounded-full bg-primary"></div>
     </section>
