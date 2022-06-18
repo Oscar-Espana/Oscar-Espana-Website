@@ -9,8 +9,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 @layer base {
-  * { 
-    @apply selection:bg-primary selection:text-white
+  * {
+    @apply selection:bg-primary selection:text-white;
   }
   body {
     @apply font-Raleway scrollbar scrollbar-thumb-primary overflow-y-scroll;
@@ -30,6 +30,9 @@ body::-webkit-scrollbar-thumb {
   }
   .gradient-background {
     @apply bg-gradient-to-r from-primary via-[#DC0CAE] to-violet;
+  }
+  .panel {
+    @apply box-border relative  min-h-screen w-full
   }
 
   .animated-gradient-button {
@@ -73,3 +76,4 @@ body::-webkit-scrollbar-thumb {
     @apply border-primary shadow-[0px_0px_12px_rgba(255,255,255,0.3)] !important;
   }
 }
+
