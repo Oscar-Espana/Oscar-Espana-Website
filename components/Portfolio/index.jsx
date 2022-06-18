@@ -45,7 +45,7 @@ const Portfolio = () => {
             </div>
             <div className="md:col-span-7 md:col-end-13 relative shadow-xl">
               <Image
-                src="/img/2x/grupo-transpoint.png"
+                src="/img/grupo-transpoint.png"
                 alt="Grupo Transpoint"
                 width={810}
                 height={392}
@@ -69,7 +69,7 @@ const Portfolio = () => {
             </div>
             <div className="md:col-span-7 md:col-end-13 relative shadow-xl">
               <Image
-                src="/img/bella.png"
+                src="/img/bella.jpg"
                 alt="Bella"
                 width={810}
                 height={392}
