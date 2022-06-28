@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
     @apply bg-gradient-to-r from-primary via-[#DC0CAE] to-violet;
   }
   .panel {
-    @apply box-border relative  min-h-screen w-full
+    @apply box-border relative  min-h-screen w-full;
   }
 
   .animated-gradient-button {
@@ -77,3 +77,24 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.wrapper {
+  background: grey;
+  overflow: hidden;
+}
+.wrapper .boxes {
+  position: relative;
+  width: 150%;
+  height: 50px;
+  left: -250px;
+}
+.wrapper .box {
+  position: absolute;
+  width: 350px;
+  height: 50px;
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  text-align: center;
+  border: solid 1px red;
+}
