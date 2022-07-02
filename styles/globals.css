@@ -76,25 +76,3 @@ body::-webkit-scrollbar-thumb {
     @apply border-primary shadow-[0px_0px_12px_rgba(255,255,255,0.3)] !important;
   }
 }
-
-.wrapper {
-  background: grey;
-  overflow: hidden;
-}
-.wrapper .boxes {
-  position: relative;
-  width: 150%;
-  height: 50px;
-  left: -250px;
-}
-.wrapper .box {
-  position: absolute;
-  width: 350px;
-  height: 50px;
-  color: black;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 50px;
-  text-align: center;
-  border: solid 1px red;
-}
