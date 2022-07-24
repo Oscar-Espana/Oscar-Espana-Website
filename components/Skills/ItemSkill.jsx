@@ -2,7 +2,7 @@ import React from "react";
 
 const ItemSkill = ({ skill }) => {
   return (
-    <p className="boxSkill absolute w-60 md:w-[425px] lg:w-[500px] text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center">
+    <p className="boxSkill absolute max-w-[420px] text-4xl lg:text-5xl font-bold text-white text-center pr-36 md:pr-40">
       {skill}
     </p>
   );

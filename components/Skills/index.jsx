@@ -9,50 +9,35 @@ gsap.registerPlugin(ScrollTrigger);
 const Skills = () => {
   const size = useWindowResize();
 
-  const getClientWidth = (index) => {
-    const skillsAux = document.querySelectorAll("#skills .boxSkill");
-    const widthAux = skillsAux[index].clientWidth;
-    return widthAux;
-  };
-
   useEffect(() => {
-    const skills = document.querySelectorAll("#skills .boxSkill");
-
-    const getTotalWidth = () => {
-      const boxWidth = skills[0].clientWidth;
-      const totalElements = skills.length;
-      const totalWidth = boxWidth * totalElements;
-      return totalWidth;
-    };
-    var mod = gsap.utils.wrap(0, getTotalWidth());
-
-    function marquee(which, time) {
-      gsap.set(which, {
-        x: function (i) {
-          return i * getClientWidth(i);
-        },
+    let totalWidth = 0;
+    const words = gsap.utils.toArray("#skills .boxSkill");
+    words.map((val, key, arr) => {
+      if (key === 0) {
+        totalWidth = words[arr.length - 1].clientWidth;
+      } else if (val.previousElementSibling) {
+        let width = val.previousElementSibling.clientWidth;
+        totalWidth = totalWidth + width;
+      }
+      gsap.set(val, {
+        x: totalWidth,
       });
-      var action = gsap.timeline().to(which, {
-        x: () => {
-          return `-=${getTotalWidth()}`;
-        },
-        modifiers: {
-          x: (x) => {
-            return mod(parseFloat(x)) + "px";
-          },
-        },
-        duration: time,
-        ease: "none",
-        repeat: -1,
-      });
-      return action;
-    }
+    });
 
-    gsap.timeline().add(marquee(skills, 20), 1);
-  }, [size.width]);
+    const tl = gsap.timeline();
+    tl.to("#skills .boxSkill", {
+      duration: 25,
+      ease: "none",
+      x: `+=${totalWidth}`,
+      modifiers: {
+        x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+      },
+      repeat: -1,
+    });
+  }, []);
   return (
     <section id="skills" className="animated-gradient overflow-hidden">
-      <div className="relative w-[150%] h-36 md:h-40 lg:h-44 -left-[200px] lg:-left-[500px] flex items-center ">
+      <div className="relative -left-[350px] h-44 lg:h-48 flex items-center">
         <ItemSkill skill="CREATIVO" />
         <ItemSkill skill="EFICIENTE" />
         <ItemSkill skill="TRABAJO EN EQUIPO" />
