@@ -2,15 +2,23 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useWindowResize } from "../../hooks/useWindowsResize";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
+  const size = useWindowResize();
+
   const aboutMeRef = useRef(null);
   const aboutMeSectionRef = useRef(null);
   const titleRef = useRef(null);
 
   useEffect(() => {
+    ScrollTrigger.matchMedia({
+      "(max-width: 767px)": function () {
+        gsap.set(titleRef.current, { clearProps: "all" });
+      },
+    });
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": function () {
         gsap.to(titleRef.current, {
@@ -22,11 +30,13 @@ const AboutMe = () => {
             start: "top top+=100",
             end: () => "bottom top+=160",
             anticipatePin: 1,
+            invalidateOnRefresh: true,
           },
         });
       },
     });
-  }, []);
+  }, [size]);
+
   return (
     <section ref={aboutMeRef} className="bg-white py-24 md:py-28 lg:py-32">
       <div ref={aboutMeSectionRef} className="container grid grid-cols-12 ">
