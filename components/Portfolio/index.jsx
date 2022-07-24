@@ -23,7 +23,7 @@ const Portfolio = () => {
   return (
     <section>
       <article className="bg-black panel">
-        <div className="container w-full h-full flex flex-col  justify-center items-center">
+        <div className="container w-full min-h-[600px] md:min-h-[800px] h-screen flex flex-col  justify-center items-center">
           <h2 className="text-primary text-6xl md:text-7xl lg:text-8xl">
             Portafolio
           </h2>
