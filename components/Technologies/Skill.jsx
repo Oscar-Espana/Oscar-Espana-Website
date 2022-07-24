@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Skill = ({ image, skill }) => {
   return (
-    <div className="flex gap-3 justify-center sm:justify-start items-center">
+    <div className="flex flex-col md:flex-row justify-center md:justify-start items-center gap-3 ">
       <Image width={48} height={48} src={image} alt={skill} />
-      <p className="hidden sm:block text-xl text-white font-medium">{skill}</p>
+      <p className="text-xl text-white font-medium">{skill}</p>
     </div>
   );
 };
