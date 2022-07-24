@@ -1,16 +1,20 @@
-import React, { useRef, useEffect } from "react";
-import Card from "./Card";
+import React, { useEffect } from "react";
 import gsap from "gsap";
+import ServiceCard from "./ServiceServiceCard";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useWindowResize } from "../../hooks/useWindowsResize";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AditionalInfo = () => {
+const MyServicesx = () => {
+  const size = useWindowResize();
   useEffect(() => {
+    console.log("use effect------");
     const services = gsap.utils.toArray("#services div");
 
     ScrollTrigger.matchMedia({
       "(max-width: 767px)": function () {
+        console.log("max width 767px");
         services.forEach((service) => {
           gsap.set(service, { opacity: 1, y: 0 });
           gsap.timeline({
@@ -20,6 +24,7 @@ const AditionalInfo = () => {
               end: "bottom center",
               scrub: true,
               toggleClass: "border-card-service",
+              invalidateOnRefresh: true,
             },
           });
         });
@@ -28,6 +33,7 @@ const AditionalInfo = () => {
 
     ScrollTrigger.matchMedia({
       "(min-width: 768px)": function () {
+        console.log("min width 768px");
         gsap.set(services, {
           autoAlpha: 0,
           y: -100,
@@ -47,34 +53,23 @@ const AditionalInfo = () => {
         });
       },
     });
-  }, []);
-
+  }, [size]);
   return (
-    <section
-      id="aditionalInfo"
-      className="bg-black pt-20 md:pt-24 pb-36 text-white"
-    >
+    <section id="services" className="bg-black pt-20 md:pt-24 pb-36 text-white">
       <div className="container">
-        <p className="text-[24px] md:text-[32px] font-medium">
-          Hola, mi nombre es Oscar España 👋. Soy desarrollador frontend con
-          experiencia en diseño y desarrollo de aplicaciones web y móviles. Me
-          encanta aprender nuevas tecnologías, emplear tendencias de diseño y me
-          enfoco en entregar un producto de calidad de acuerdo a las necesidades
-          del usuario
-        </p>
         <div
           id="services"
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-36"
         >
-          <Card
+          <ServiceCard
             urlImage="/iconos/desktop.svg"
             description="Desarrollo de aplicaciones web, sitios web, E -commerce"
           />
-          <Card
+          <ServiceCard
             urlImage="/iconos/phone.svg"
             description="Desarrollo de aplicaciones móviles  multiplataforma (Android y iOS)"
           />
-          <Card
+          <ServiceCard
             urlImage="/iconos/layers.svg"
             description="Diseño UI de aplicaciones web y móviles"
           />
@@ -84,4 +79,4 @@ const AditionalInfo = () => {
   );
 };
 
-export default AditionalInfo;
+export default MyServicesx;
