@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import gsap from "gsap";
+import gsap, { Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Image from "next/image";
+import CardPortfolio from "./CardPortfolio";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +18,46 @@ const Portfolio = () => {
         });
       }
     });
+
+    const articlesPortfolio = gsap.utils.toArray(".panel article");
+    articlesPortfolio.forEach((article) => {
+      gsap.to(article, {
+        scrollTrigger: {
+          trigger: "#items-portfolio",
+          start: "center center",
+          end: "bottom center",
+          scrub: true,
+          toggleClass: "!bg-black",
+        },
+      });
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#items-portfolio",
+          start: "center center",
+          end: "center center-=10px",
+          scrub: true,
+        },
+        defaults: {
+          ease: Power1.easeInOut,
+        },
+      });
+      tl.to(article, {
+        color: "white",
+        background: "#1D2023",
+      });
+
+      const descriptionPortfolio = article.getElementsByClassName(
+        "description-portfolio"
+      )[0];
+      tl.to(descriptionPortfolio, {
+        color: "white",
+      });
+
+      const techPortfolio = article.getElementsByClassName("tech-portfolio")[0];
+      tl.to(techPortfolio, {
+        color: "rgb(160, 160, 160)",
+      });
+    });
   }, []);
 
   return (
@@ -30,54 +70,46 @@ const Portfolio = () => {
           <p className="text-white mt-8 text-3xl">Oscar España</p>
         </div>
       </article>
-      <div className="panel">
-        <article className="bg-gray z-10">
-          <div className="container grid grid-cols-1 md:grid-cols-12 gap-5  py-20 md:py-28 lg:py-36">
-            <div className=" md:col-span-4">
-              <h3 className="text-black">
-                Grupo <span className="text-primary">Transoecánica</span>
-              </h3>
-              <p className="text-darkGray mt-12">
-                Aplicación web destinada a la automatización de procesos que
-                llevan las operadoras de vuelo con respecto a la programación de
-                vuelos.
-              </p>
-            </div>
-            <div className="md:col-span-7 md:col-end-13 relative shadow-xl">
-              <Image
-                src="/img/grupo-transpoint.png"
-                alt="Grupo Transpoint"
-                width={810}
-                height={392}
-                layout="responsive"
-              />
-            </div>
-          </div>
-        </article>
+      <div
+        id="items-portfolio"
+        className="panel bg-gray z-10 py-24 md:py-28 lg:py-32 px-4 md:px-0 space-y-14 md:space-y-20"
+      >
+        <CardPortfolio
+          title="Grupo"
+          titleEmphasys="Transoecánica"
+          description="Aplicación web destinada a la automatización de procesos que
+        llevan las operadoras de vuelo con respecto a la programación de
+        vuelos."
+          imageUrl="/img/grupo-transpoint.png"
+          technologies="React, Next JS, MUI, Typescript, GraphQL, Redux Toolkit"
+        />
 
-        <article className="bg-white">
-          <div className="container grid grid-cols-1 md:grid-cols-12 gap-5 py-20 md:py-28 lg:py-36">
-            <div className=" md:col-span-4">
-              <h3 className="text-black">
-                <span className="text-primary">Bella</span>
-              </h3>
-              <p className="text-darkGray mt-12">
-                Landing Page minimaslista y elegante que contiene una gran
-                variedad de animaciones que se activan por medio del scroll.
-                Realizada usando GSAP.
-              </p>
-            </div>
-            <div className="md:col-span-7 md:col-end-13 relative shadow-xl">
-              <Image
-                src="/img/bella.jpg"
-                alt="Bella"
-                width={810}
-                height={392}
-                layout="responsive"
-              />
-            </div>
-          </div>
-        </article>
+        <CardPortfolio
+          titleEmphasys="Bella"
+          description="Landing Page minimaslista y elegante que contiene una gran
+          variedad de animaciones que se activan por medio del scroll.
+          Realizada usando GSAP."
+          imageUrl="/img/bella.jpg"
+          technologies="HTML, CSS,  Vanilla JS, GSAP, Scrolltrigger "
+        />
+        <CardPortfolio
+          title="Grupo"
+          titleEmphasys="Transoecánica"
+          description="Aplicación web destinada a la automatización de procesos que
+        llevan las operadoras de vuelo con respecto a la programación de
+        vuelos."
+          imageUrl="/img/grupo-transpoint.png"
+          technologies="React, Next JS, MUI, Typescript, GraphQL, Redux Toolkit"
+        />
+
+        <CardPortfolio
+          titleEmphasys="Bella"
+          description="Landing Page minimaslista y elegante que contiene una gran
+          variedad de animaciones que se activan por medio del scroll.
+          Realizada usando GSAP."
+          imageUrl="/img/bella.jpg"
+          technologies="HTML, CSS,  Vanilla JS, GSAP, Scrolltrigger "
+        />
       </div>
     </section>
   );
