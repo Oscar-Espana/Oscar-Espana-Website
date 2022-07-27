@@ -34,7 +34,7 @@ const Portfolio = () => {
         scrollTrigger: {
           trigger: "#items-portfolio",
           start: "center center",
-          end: "center center-=10px",
+          end: "center center",
           scrub: true,
         },
         defaults: {
@@ -72,7 +72,7 @@ const Portfolio = () => {
       </article>
       <div
         id="items-portfolio"
-        className="panel bg-gray z-10 py-24 md:py-28 lg:py-32 px-4 md:px-0 space-y-14 md:space-y-20"
+        className="panel bg-gray z-10 py-24 md:py-28 lg:py-32 px-4 md:px-0 space-y-14 md:space-y-20 transition-colors duration-500  "
       >
         <CardPortfolio
           title="Grupo"

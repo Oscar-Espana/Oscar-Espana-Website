@@ -9,7 +9,7 @@ const CardPortfolio = ({
   technologies,
 }) => {
   return (
-    <article className="container bg-white rounded-3xl text-black">
+    <article className="container bg-white rounded-3xl text-black transition-colors duration-200">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-5 py-20 md:py-24 lg:py-28">
         <div className=" md:col-span-4">
           <h3>
