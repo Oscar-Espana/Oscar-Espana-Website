@@ -9,7 +9,7 @@ const CardPortfolio = ({
   technologies,
 }) => {
   return (
-    <article className="container bg-white rounded-3xl text-black transition-colors duration-200">
+    <article className="container bg-white rounded-3xl text-black transition-colors duration-300 ease-in-out ">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-5 py-20 md:py-24 lg:py-28">
         <div className=" md:col-span-4">
           <h3>
@@ -24,8 +24,8 @@ const CardPortfolio = ({
             <Image
               src={imageUrl}
               alt={`${title} ${titleEmphasys}`}
-              width={810}
-              height={392}
+              width={640}
+              height={365}
               layout="responsive"
             />
           </figure>
