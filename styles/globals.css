@@ -62,7 +62,13 @@ body::-webkit-scrollbar-thumb {
   }
 
   .text-gradient {
-    background: linear-gradient(90deg, #1AC6EC -4.02%, #D12F97 103.35%, #E5288C 103.37%, #E72889 103.38%);
+    background: linear-gradient(
+      90deg,
+      #1ac6ec -4.02%,
+      #d12f97 103.35%,
+      #e5288c 103.37%,
+      #e72889 103.38%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -85,5 +91,27 @@ body::-webkit-scrollbar-thumb {
     @apply border-primary shadow-[0px_0px_12px_rgba(255,255,255,0.3)] !important;
   }
 
-  
+  .elipse1 {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    left: -442px;
+    top: 18px;
+    background: #681e8c;
+    opacity: 0.7;
+    box-shadow: 0px 0px 16px 76px rgba(231, 40, 137, 0.5);
+    filter: blur(500px);
+  }
+
+  .elipse2 {
+    position: absolute;
+    width: 687px;
+    height: 732px;
+    right: -300px;
+    bottom: -350px;
+    background: #056c8c;
+    opacity: 0.7;
+    box-shadow: 0px 0px 16px 76px rgba(231, 40, 137, 0.5);
+    filter: blur(500px);
+  }
 }

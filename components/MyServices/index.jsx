@@ -9,23 +9,30 @@ const MyServices = () => {
   useEffect(() => {
     const services = gsap.utils.toArray("#services article");
 
-    services.forEach((service, index) => {
-      gsap.to(service, {
-        scrollTrigger: {
-          trigger: service,
-          start: "top center",
-          end: "bottom center+=150px",
-          scrub: true,
-          toggleClass: "border-card-service",
-          invalidateOnRefresh: true,
-        },
-        stagger: 1,
-      });
+    ScrollTrigger.matchMedia({
+      "(max-width: 767px)": function () {
+        console.log("max width 767px");
+        services.forEach((service) => {
+          gsap.to(service, {
+            scrollTrigger: {
+              trigger: service,
+              start: "top center",
+              end: "bottom-=50px center",
+              scrub: true,
+              toggleClass: "border-card-service",
+              invalidateOnRefresh: true,
+            },
+          });
+        });
+      },
     });
   }, []);
   return (
-    <section id="services" className="pt-10 pb-36 bg-black text-white">
-      <div className="container">
+    <section
+      id="services"
+      className="relative overflow-hidden pt-10 pb-36 bg-black text-white"
+    >
+      <div className="relative container z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <ServiceCard
             urlImage="/iconos/desktop.svg"
@@ -41,6 +48,7 @@ const MyServices = () => {
           />
         </div>
       </div>
+      <div className="absolute rounded-full elipse2"></div>
     </section>
   );
 };

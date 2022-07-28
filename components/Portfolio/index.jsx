@@ -64,7 +64,7 @@ const Portfolio = () => {
     <section>
       <article className="bg-black panel">
         <div className="container w-full min-h-[600px] md:min-h-[800px] h-screen flex flex-col  justify-center items-center">
-          <h2 className="text-primary text-6xl md:text-7xl lg:text-8xl">
+          <h2 className="text-primary text-5xl md:text-7xl lg:text-8xl">
             PORTAFOLIO
           </h2>
           <p className="text-white mt-8 text-3xl">Oscar España</p>
