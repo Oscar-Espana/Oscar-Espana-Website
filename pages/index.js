@@ -6,6 +6,7 @@ import Presentation from "../components/Presentation";
 import Technologies from "../components/Technologies";
 import CustomCursor from "../components/CustomCursor";
 import Portfolio from "../components/Portfolio";
+import MyServices from "../components/MyServices";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <CustomCursor />
       <Hero />
       <Presentation />
+      <MyServices />
       <Skills />
       <Technologies />
       <AboutMe />

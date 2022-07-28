@@ -1,66 +1,32 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import ServiceCard from "./ServiceServiceCard";
+import ServiceCard from "./ServiceCard";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useWindowResize } from "../../hooks/useWindowsResize";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MyServicesx = () => {
-  const size = useWindowResize();
+const MyServices = () => {
   useEffect(() => {
-    console.log("use effect------");
-    const services = gsap.utils.toArray("#services div");
+    const services = gsap.utils.toArray("#services article");
 
-    ScrollTrigger.matchMedia({
-      "(max-width: 767px)": function () {
-        console.log("max width 767px");
-        services.forEach((service) => {
-          gsap.set(service, { opacity: 1, y: 0 });
-          gsap.timeline({
-            scrollTrigger: {
-              trigger: service,
-              start: "top center",
-              end: "bottom center",
-              scrub: true,
-              toggleClass: "border-card-service",
-              invalidateOnRefresh: true,
-            },
-          });
-        });
-      },
+    services.forEach((service, index) => {
+      gsap.to(service, {
+        scrollTrigger: {
+          trigger: service,
+          start: "top center",
+          end: "bottom center+=150px",
+          scrub: true,
+          toggleClass: "border-card-service",
+          invalidateOnRefresh: true,
+        },
+        stagger: 1,
+      });
     });
-
-    ScrollTrigger.matchMedia({
-      "(min-width: 768px)": function () {
-        console.log("min width 768px");
-        gsap.set(services, {
-          autoAlpha: 0,
-          y: -100,
-        });
-        gsap.to("#services div", {
-          scrollTrigger: {
-            trigger: "#aditionalInfo",
-            start: "center top+=25%",
-            pin: true,
-            end: () => "+=100%",
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
-          y: 0,
-          autoAlpha: 1,
-          stagger: 0.18,
-        });
-      },
-    });
-  }, [size]);
+  }, []);
   return (
-    <section id="services" className="bg-black pt-20 md:pt-24 pb-36 text-white">
+    <section id="services" className="pt-10 pb-36 bg-black text-white">
       <div className="container">
-        <div
-          id="services"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-36"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <ServiceCard
             urlImage="/iconos/desktop.svg"
             description="Desarrollo de aplicaciones web, sitios web, E -commerce"
@@ -79,4 +45,4 @@ const MyServicesx = () => {
   );
 };
 
-export default MyServicesx;
+export default MyServices;
