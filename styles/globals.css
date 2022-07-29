@@ -114,4 +114,18 @@ body::-webkit-scrollbar-thumb {
     box-shadow: 0px 0px 16px 76px rgba(231, 40, 137, 0.5);
     filter: blur(500px);
   }
+
+  .background-gradiend {
+    background: radial-gradient(
+      100% 324% at 100% 0%,
+      #3d092e 0%,
+      rgba(58, 10, 48, 0.952257) 11.71%,
+      rgba(58, 7, 53, 0.92) 17.28%,
+      rgba(65, 8, 56, 0.929801) 21.94%,
+      #4a104b 29.59%,
+      #042233 77.31%,
+      #051d29 87.79%,
+      #061820 100%
+    );
+  }
 }
