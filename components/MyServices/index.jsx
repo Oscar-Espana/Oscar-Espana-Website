@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import gsap from "gsap";
+import gsap, { Power1 } from "gsap";
 import ServiceCard from "./ServiceCard";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -17,11 +17,12 @@ const MyServices = () => {
             scrollTrigger: {
               trigger: service,
               start: "top center",
-              end: "bottom-=50px center",
-              scrub: true,
+              end: "bottom center",
+              scrub: 3,
               toggleClass: "border-card-service",
               invalidateOnRefresh: true,
             },
+            ease: Power1.easeInOut,
           });
         });
       },
@@ -33,7 +34,7 @@ const MyServices = () => {
       className="relative overflow-hidden pt-10 pb-36 bg-black text-white"
     >
       <div className="relative container z-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5">
           <ServiceCard
             urlImage="/iconos/desktop.svg"
             description="Desarrollo de aplicaciones web, sitios web, E -commerce"
