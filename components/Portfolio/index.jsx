@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
 import gsap, { Power1 } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import React, { useEffect } from "react";
 import CardPortfolio from "./CardPortfolio";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -62,9 +62,9 @@ const Portfolio = () => {
 
   return (
     <section>
-      <article className="bg-black md:background-gradiend panel">
-        <div className="container w-full min-h-[600px] md:min-h-[800px] h-screen flex flex-col  justify-center items-center">
-          <h2 className="text-primary md:text-white text-6xl md:text-7xl lg:text-[84px]">
+      <article className="bg-primary panel">
+        <div className="container w-full min-h-[600px] h-screen flex flex-col  justify-center items-center">
+          <h2 className="text-white text-6xl md:text-7xl lg:text-[84px]">
             Portafolio
           </h2>
           <p className="text-white mt-8 text-3xl">Oscar España</p>

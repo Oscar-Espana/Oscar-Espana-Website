@@ -16,11 +16,12 @@ body::-webkit-scrollbar-thumb {
     @apply font-Raleway scrollbar scrollbar-thumb-primary overflow-y-scroll;
   }
   h2 {
-    @apply text-[39px] md:text-[48px] lg:text-[56px] font-semibold md:leading-normal selection:bg-primary selection:text-white;
+    @apply text-[42px] md:text-[54px] lg:text-[64px] font-semibold md:leading-normal selection:bg-primary selection:text-white;
   }
   h3 {
     @apply text-[36px] md:text-[42px] lg:text-5xl font-semibold;
   }
+
   .tag {
     @apply text-primary text-[28px] md:text-[40px] lg:text-5xl font-medium leading-none;
   }
@@ -115,17 +116,18 @@ body::-webkit-scrollbar-thumb {
     filter: blur(500px);
   }
 
-  .background-gradiend {
-    background: radial-gradient(
-      100% 324% at 100% 0%,
-      #3d092e 0%,
-      rgba(58, 10, 48, 0.952257) 11.71%,
-      rgba(58, 7, 53, 0.92) 17.28%,
-      rgba(65, 8, 56, 0.929801) 21.94%,
-      #4a104b 29.59%,
-      #042233 77.31%,
-      #051d29 87.79%,
-      #061820 100%
+  .text-gradiend-gray {
+    background: linear-gradient(
+      72.02deg,
+      #9c9ea2 18.46%,
+      #cbcbd2 33.62%,
+      #d4d4dc 46.52%,
+      #d9d9de 62.01%,
+      #a7a7ac 80.4%
     );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
   }
 }

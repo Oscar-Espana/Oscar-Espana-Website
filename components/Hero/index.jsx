@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
+import React, { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[600px] md:min-h-[800px] h-screen pb-[10vh] md:pb-0 bg-black flex items-center text-white transition-colors ease-in-out duration-500"
+      className="relative min-h-[600px] h-screen pb-[10vh] md:pb-0 bg-black flex items-center text-white transition-colors ease-in-out duration-500"
     >
       <div className="container">
         <h1 className="flex flex-col gap-2 md:gap-3 text-[36px] md:text-[54px] lg:text-[66px] leading-[1.18] font-bold lg:py-2 uppercase overflow-hidden">

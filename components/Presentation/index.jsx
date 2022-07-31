@@ -1,10 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 
 const Presentation = () => {
   return (
     <section
       id="presentation"
-      className="relative bg-black pt-20 md:pt-24 pb-36 text-white"
+      className="relative bg-black pt-16 md:pt-24 pb-20 md:pb-36 text-white"
     >
       <div className="absolute z-10 rounded-full elipse1"></div>
       <div className="relative container z-20">

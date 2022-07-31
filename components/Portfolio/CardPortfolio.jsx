@@ -15,7 +15,7 @@ const CardPortfolio = ({
           <h3>
             {title} <span className="text-primary">{titleEmphasys}</span>
           </h3>
-          <p className="description-portfolio mt-12 text-darkGray">
+          <p className="description-portfolio text-[17px] mt-12 text-darkGray">
             {description}
           </p>
         </div>
