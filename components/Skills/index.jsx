@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import ItemSkill from "./ItemSkill";
+import React, { useEffect } from "react";
 import { useWindowResize } from "../../hooks/useWindowsResize";
+import ItemSkill from "./ItemSkill";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +36,7 @@ const Skills = () => {
     });
   }, []);
   return (
-    <section id="skills" className="animated-gradient overflow-hidden">
+    <section id="skills" className="bg-primary overflow-hidden">
       <div className="relative -left-[350px] h-44 lg:h-48 flex items-center">
         <ItemSkill skill="CREATIVO" />
         <ItemSkill skill="EFICIENTE" />

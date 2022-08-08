@@ -45,7 +45,7 @@ const Hero = () => {
       className="relative min-h-[600px] h-screen pb-[10vh] md:pb-0 bg-black flex items-center text-white transition-colors ease-in-out duration-500"
     >
       <div className="container">
-        <h1 className="flex flex-col gap-2 md:gap-3 text-[36px] md:text-[54px] lg:text-[66px] leading-[1.18] font-bold lg:py-2 uppercase overflow-hidden">
+        <h1 className="flex flex-col gap-2 md:gap-3 text-[36px] md:text-[54px] lg:text-[72px] leading-[1.18] font-bold lg:py-2 uppercase overflow-hidden">
           <span
             data-color="text-darkGray"
             className="text-primary selection:bg-white selection:text-primary translate-y-48 "
@@ -56,7 +56,7 @@ const Hero = () => {
         </h1>
         <div className="mt-16 overflow-hidden">
           <button
-            className=" px-12 py-3 text-xl font-semibold bg-primary  text-white rounded-lg cursor-pointer
+            className=" px-12 py-3 text-xl font-medium bg-gradient-primary text-white rounded-lg cursor-pointer
            hover:animated-gradient-button translate-y-24"
           >
             Contáctame

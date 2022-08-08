@@ -62,7 +62,7 @@ const Portfolio = () => {
 
   return (
     <section>
-      <article className="bg-primary panel">
+      <article className="bg-gradient-primary panel">
         <div className="container w-full min-h-[600px] h-screen flex flex-col  justify-center items-center">
           <h2 className="text-white text-6xl md:text-7xl lg:text-[84px]">
             Portafolio

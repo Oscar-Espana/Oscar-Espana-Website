@@ -62,7 +62,7 @@ body::-webkit-scrollbar-thumb {
     background-size: 400% 400%;
   }
 
-  .text-gradient {
+  .text-gradient-violet {
     background: linear-gradient(
       90deg,
       #1ac6ec -4.02%,
@@ -116,15 +116,12 @@ body::-webkit-scrollbar-thumb {
     filter: blur(500px);
   }
 
-  .text-gradiend-gray {
-    background: linear-gradient(
-      72.02deg,
-      #9c9ea2 18.46%,
-      #cbcbd2 33.62%,
-      #d4d4dc 46.52%,
-      #d9d9de 62.01%,
-      #a7a7ac 80.4%
-    );
+  .bg-gradient-primary {
+    background: linear-gradient(91.72deg, #df11e3 0%, #e72889 96.35%);
+  }
+
+  .text-gradient-primary {
+    background: linear-gradient(91.72deg, #df11e3 0%, #e72889 96.35%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

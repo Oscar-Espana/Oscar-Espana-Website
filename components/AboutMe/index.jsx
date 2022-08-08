@@ -42,23 +42,23 @@ const AboutMe = () => {
       <div ref={aboutMeSectionRef} className="container grid grid-cols-12 ">
         <div className="col-span-12 md:col-span-5">
           <h2 ref={titleRef}>
-            <span className="text-primary">Acerca</span> de mi
+            <span className="text-gradient-primary ">Acerca</span> de mi
           </h2>
         </div>
         <div className="col-span-12  md:col-span-7 md:col-start-6 flex flex-col justify-center">
           <div className="space-y-3 mb-16 mt-6 md:mt-0 md:mb-28">
-            <p className="text-[17px]">
+            <p className="text-[18px]">
               Mi nombre es Oscar España, soy ingeniero en Electrónica y Redes de
               Información graduado de la Escuela Politécnica Nacional en Quito -
               Ecuador, me considero un apasionado del desarrollo web y móvil, y
               constantemente me encuentro aprendiendo nuevas tecnologías.
             </p>
-            <p className="text-[17px]">
+            <p className="text-[18px]">
               Mi interés por desarrollo web comenzó a inicios del 2019 y desde
               ese momento nunca he dejado de aprender, he llegado a realizar
               proyectos para pequeñas, medianas y grandes empresas.
             </p>
-            <p className="text-[17px]">
+            <p className="text-[18px]">
               A lo largo de mi carrera profesional he participado en proyectos
               tanto para Backend y Frontend, sin embargo mi especialidad es del
               desarrollo Frontend, con la cual me siento mas cómodo. Además,
