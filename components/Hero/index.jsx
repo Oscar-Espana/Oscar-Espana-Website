@@ -55,12 +55,14 @@ const Hero = () => {
           <span className="translate-y-48"> Desarrollador Frontend</span>
         </h1>
         <div className="mt-16 overflow-hidden">
-          <button
-            className=" px-12 py-3 text-xl font-medium bg-gradient-primary text-white rounded-lg cursor-pointer
+          <a href="mailto:espaaoscar@gmail.com">
+            <button
+              className=" px-12 py-3 text-xl font-medium bg-gradient-primary text-white rounded-lg cursor-pointer
            hover:animated-gradient-button translate-y-24"
-          >
-            Contáctame
-          </button>
+            >
+              Contáctame
+            </button>
+          </a>
         </div>
       </div>
       <div className="absolute left-1/2 bottom-[12vh] md:bottom-14 -translate-x-1/2 cursor-pointer opacity-70 hover:opacity-100">

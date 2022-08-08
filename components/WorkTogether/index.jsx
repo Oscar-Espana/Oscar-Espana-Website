@@ -1,4 +1,5 @@
 import React from "react";
+import LinkContact from "./LinkContact";
 
 const WorkTogether = () => {
   return (
@@ -11,23 +12,32 @@ const WorkTogether = () => {
             </span>{" "}
             juntos
           </h2>
-          <button
-            className="mt-16 md:mt-24 px-12 py-3 text-xl font-medium bg-gradient-primary text-white rounded-lg cursor-pointer
+          <a href="mailto:espaaoscar@gmail.com" className="mt-16 md:mt-24">
+            <button
+              className="px-12 py-3 text-xl font-medium bg-gradient-primary text-white rounded-lg cursor-pointer
            hover:animated-gradient-button"
-          >
-            Contáctame
-          </button>
+            >
+              Contáctame
+            </button>
+          </a>
         </div>
         <div className="col-span-12 md:col-span-7 md:col-start-6 flex flex-col justify-center">
           <div className="space-y-3 mb-16 mt-6 md:mt-0 md:mb-28 text-white">
-            <p className="text-[18px] text-center md:text-right ">
-              espaaoscar@gmail.com
-            </p>
-            <p className="text-[18px] text-center md:text-right ">
-              +593990121123
-            </p>
-            <p className="text-[18px] text-center md:text-right ">LinkedIn</p>
-            <p className="text-[18px] text-center md:text-right ">Github</p>
+            <LinkContact
+              contactInfo="espaaoscar@gmail.com"
+              href="mailto:espaaoscar@gmail.com"
+            />
+            <LinkContact contactInfo="+593990121123" href="tel:+593990121123" />
+            <LinkContact
+              contactInfo="LinkedIn"
+              href="https://linkedin.com/in/oscar-españa-56aa77172"
+              openNewTab={true}
+            />
+            <LinkContact
+              contactInfo="GitHub"
+              href="https://github.com/Oscar-Espana"
+              openNewTab={true}
+            />
           </div>
         </div>
       </div>
