@@ -52,7 +52,7 @@ const Hero = () => {
           >
             Oscar España
           </span>
-          <span className="translate-y-48">Desarrollador Frontend</span>
+          <span className="translate-y-48"> Desarrollador Frontend</span>
         </h1>
         <div className="mt-16 overflow-hidden">
           <button
@@ -68,6 +68,7 @@ const Hero = () => {
           src="/iconos/scroll-down.svg"
           width={56}
           height={56}
+          layout="fixed"
           alt="Scroll Down"
           className="opacity-0"
         />
