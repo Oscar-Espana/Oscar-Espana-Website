@@ -25,7 +25,7 @@ const Portfolio = () => {
         scrollTrigger: {
           trigger: "#items-portfolio",
           start: "center center",
-          end: "bottom center",
+          end: "bottom start-=150px",
           scrub: true,
           toggleClass: "!bg-black",
         },

@@ -1,12 +1,13 @@
 import Head from "next/head";
-import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
-import Skills from "../components/Skills";
-import Presentation from "../components/Presentation";
-import Technologies from "../components/Technologies";
 import CustomCursor from "../components/CustomCursor";
-import Portfolio from "../components/Portfolio";
+import Hero from "../components/Hero";
 import MyServices from "../components/MyServices";
+import Portfolio from "../components/Portfolio";
+import Presentation from "../components/Presentation";
+import Skills from "../components/Skills";
+import Technologies from "../components/Technologies";
+import WorkTogether from "../components/WorkTogether";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Technologies />
       <AboutMe />
       <Portfolio />
+      <WorkTogether />
     </div>
   );
 }
