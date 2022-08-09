@@ -3,6 +3,7 @@ import AboutMe from "../components/AboutMe";
 import CustomCursor from "../components/CustomCursor";
 import Hero from "../components/Hero";
 import MyServices from "../components/MyServices";
+import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio";
 import Presentation from "../components/Presentation";
 import Skills from "../components/Skills";
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
 
       <CustomCursor />
+      <Navbar />
       <Hero />
       <Presentation />
       <MyServices />
