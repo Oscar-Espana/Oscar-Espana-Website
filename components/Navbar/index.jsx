@@ -10,7 +10,7 @@ const Navbar = () => {
     const showHideNav = gsap
       .from("nav", {
         yPercent: -100,
-        duration: 0.3,
+        duration: 0.275,
         ease: "sine.out",
       })
       .progress(1);
@@ -27,7 +27,7 @@ const Navbar = () => {
     });
   }, []);
   return (
-    <nav className="fixed w-full z-50 bg-[rgba(0,0,0,0.05)] backdrop-blur-md flex items-center py-1 md:py-4">
+    <nav className="fixed w-full z-50 bg-[rgba(0,0,0,0.06)] backdrop-blur-md flex items-center py-1 md:py-3">
       <div className="relative container m-auto text-white font-medium text-[40px] ">
         <Link href="/">
           <a>
