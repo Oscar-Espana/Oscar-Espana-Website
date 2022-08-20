@@ -73,17 +73,19 @@ const AboutMe = () => {
             </p>
           </div>
 
-          <Image
-            className="hover:scale-[1.2] transition-transform duration-300 ease-in-out"
-            src="/img/about-me.jpg"
-            alt="Acerca de mi"
-            width={590}
-            height={466}
-            layout="responsive"
-            quality={100}
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN88B8AAsUB4ZtvXtIAAAAASUVORK5CYII="
-          />
+          <picture className="group hover:scale-x-95 transition-transform duration-700">
+            <Image
+              className="group-hover:scale-[1.2] transition-transform duration-700 ease-in-out"
+              src="/img/about-me.jpg"
+              alt="Acerca de mi"
+              width={590}
+              height={466}
+              layout="responsive"
+              quality={100}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN88B8AAsUB4ZtvXtIAAAAASUVORK5CYII="
+            />
+          </picture>
         </div>
       </div>
     </section>
