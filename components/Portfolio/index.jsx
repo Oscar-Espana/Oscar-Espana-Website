@@ -1,4 +1,4 @@
-import gsap, { Power1 } from "gsap";
+import gsap, { Power1, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect } from "react";
 import CardPortfolio from "./CardPortfolio";
@@ -56,6 +56,21 @@ const Portfolio = () => {
       const techPortfolio = article.getElementsByClassName("tech-portfolio")[0];
       tl.to(techPortfolio, {
         color: "rgb(160, 160, 160)",
+      });
+
+      const h3 = article.querySelector("h3");
+      const figure = article.querySelector("figure");
+
+      gsap.from(figure, {
+        scrollTrigger: {
+          trigger: h3,
+          start: "bottom bottom",
+          end: "bottom bottom-=50%",
+          scrub: true,
+        },
+        autoAlpha: 0,
+        yPercent: 50,
+        ease: Sine.easeOut,
       });
     });
   }, []);
