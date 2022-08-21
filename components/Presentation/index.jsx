@@ -3,7 +3,7 @@ import React from "react";
 const Presentation = () => {
   return (
     <section
-      id="presentation"
+      id="presentacion"
       className="relative bg-black pt-16 md:pt-24 pb-20 md:pb-36 text-white"
     >
       <div className="absolute z-10 rounded-full elipse1"></div>
