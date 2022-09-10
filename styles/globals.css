@@ -127,4 +127,9 @@ body::-webkit-scrollbar-thumb {
     background-clip: text;
     text-fill-color: transparent;
   }
+
+  #presentacion p > div {
+    opacity: 0;
+    transform: translate(0);
+  }
 }
