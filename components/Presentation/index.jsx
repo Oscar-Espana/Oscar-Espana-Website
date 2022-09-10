@@ -21,7 +21,6 @@ const Presentation = () => {
           scrub: 1,
           start: "top 75%",
           end: "bottom+=75% 75%",
-          markers: true,
         },
       });
 
