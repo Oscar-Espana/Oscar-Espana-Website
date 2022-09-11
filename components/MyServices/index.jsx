@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import gsap, { Power1 } from "gsap";
-import ServiceCard from "./ServiceCard";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import React, { useEffect } from "react";
+import ServiceCard from "./ServiceCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,22 +11,21 @@ const MyServices = () => {
 
     ScrollTrigger.matchMedia({
       "(max-width: 767px)": function () {
-        console.log("max width 767px");
         services.forEach((service) => {
           gsap.to(service, {
             scrollTrigger: {
               trigger: service,
               start: "top center",
-              end: "bottom center",
-              scrub: 3,
+              end: "bottom-=10% center",
+              scrub: 1,
               toggleClass: "border-card-service",
               invalidateOnRefresh: true,
             },
-            ease: Power1.easeInOut,
           });
         });
       },
     });
+    ScrollTrigger.refresh();
   }, []);
   return (
     <section

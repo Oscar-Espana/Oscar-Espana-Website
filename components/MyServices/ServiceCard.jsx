@@ -4,9 +4,8 @@ import React from "react";
 const Card = ({ description, urlImage }) => {
   return (
     <article
-      className="bg-darkGray px-10 py-16 rounded-[32px] text-center border-2 border-darkGray hover:border-2 hover:border-primary
-      hover:shadow-[0px_0px_12px_rgba(255,255,255,0.3)] transition-all duration-300 ease-in-out
-    "
+      className="bg-darkGray px-10 py-16 rounded-[32px] text-center border-2 border-darkGray sm:hover:border-2 sm:hover:border-primary
+      sm:hover:shadow-[0px_0px_12px_rgba(255,255,255,0.3)] transition-colors duration-150 ease-in-out"
     >
       <Image
         src={urlImage}
