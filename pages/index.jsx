@@ -1,6 +1,6 @@
-import Head from "next/head";
 import AboutMe from "../components/AboutMe";
 import CustomCursor from "../components/CustomCursor";
+import CustomHead from "../components/CustomHead";
 import Hero from "../components/Hero";
 import MyServices from "../components/MyServices";
 import Navbar from "../components/Navbar";
@@ -12,12 +12,11 @@ import WorkTogether from "../components/WorkTogether";
 
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>Oscar España</title>
-        <meta name="description" content="Oscar España - Portafolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <CustomHead
+        title="Oscar España - Portafolio"
+        description="Soy Oscar España, apasionado por el desarrollador frontend con experiencia en diseño y desarrollo de aplicaciones web y móviles."
+      />
 
       <CustomCursor />
       <Navbar />
@@ -29,6 +28,6 @@ export default function Home() {
       <AboutMe />
       <Portfolio />
       <WorkTogether />
-    </div>
+    </>
   );
 }
