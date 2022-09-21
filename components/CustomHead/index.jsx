@@ -35,6 +35,12 @@ const CustomHead = ({ title, description }) => {
         content="https://res.cloudinary.com/duvrmhcdl/image/upload/v1662952705/Oscar%20Espa%C3%B1a%20-%20P%C3%A1gina%20web/Oscar-Espana-Graph.jpg"
       />
 
+      <link rel="alternate" href={URL} hrefLang="es-ec" />
+      <link rel="alternate" href={URL} hrefLang="x-default" />
+
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={URL} />
+
       <link rel="apple-touch-icon" href="/oscar-espana.svg" />
       <link rel="icon" href="/oscar-espana.svg" />
       <meta name="msapplication-TileColor" content="#000" />
