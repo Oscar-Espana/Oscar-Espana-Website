@@ -107,24 +107,6 @@ const Portfolio = () => {
           imageUrl="/img/bella.png"
           technologies="HTML, CSS,  Vanilla JS, GSAP, Scrolltrigger "
         />
-        <CardPortfolio
-          title="Grupo"
-          titleEmphasys="Transoecánica"
-          description="Aplicación web destinada a la automatización de procesos que
-        llevan las operadoras de vuelo con respecto a la programación de
-        vuelos."
-          imageUrl="/img/grupo-transoceanica.png"
-          technologies="React, Next JS, MUI, Typescript, GraphQL, Redux Toolkit"
-        />
-
-        <CardPortfolio
-          titleEmphasys="Bella"
-          description="Landing Page minimaslista y elegante que contiene una gran
-          variedad de animaciones que se activan por medio del scroll.
-          Realizada usando GSAP."
-          imageUrl="/img/bella.png"
-          technologies="HTML, CSS,  Vanilla JS, GSAP, Scrolltrigger "
-        />
       </div>
     </section>
   );
