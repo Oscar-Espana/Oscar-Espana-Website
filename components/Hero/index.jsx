@@ -65,8 +65,8 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="absolute left-1/2 bottom-[12vh] md:bottom-14 -translate-x-1/2 cursor-pointer opacity-70 hover:opacity-100">
-        <a href="#presentacion">
+      <div className="absolute  left-1/2 bottom-[12vh] md:bottom-14 -translate-x-1/2 cursor-pointer opacity-70 hover:opacity-100">
+        <a href="#presentacion" className="cursor-pointer flex">
           <Image
             src="/iconos/scroll-down.svg"
             width={56}
