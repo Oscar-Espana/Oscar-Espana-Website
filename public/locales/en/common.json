@@ -47,5 +47,9 @@
   "workingTogether": {
     "working": "Let's work",
     "together": "together"
+  },
+  "metadata": {
+    "title": "Oscar España - Portfolio",
+    "description": "I'm Oscar Spain, passionate about front-end developer with experience in web and mobile application design and development. Contact me"
   }
 }

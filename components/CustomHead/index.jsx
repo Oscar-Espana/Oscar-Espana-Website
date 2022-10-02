@@ -1,6 +1,7 @@
+import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React from "react";
+import i18nextConfig from "../../next-i18next.config";
 
 const CustomHead = ({ title, description }) => {
   const router = useRouter();
@@ -10,10 +11,13 @@ const CustomHead = ({ title, description }) => {
       : "";
 
   const URL = `${origin}${router.asPath}`;
+  const locales = router.locales || [];
+  const defaultLocale = i18nextConfig.i18n.defaultLocale;
+  const currentLocale = router.locale || defaultLocale;
 
   return (
     <Head>
-      <title>Oscar España - Portafolio</title>
+      <title>{title}</title>
       <meta name="title" content={title} />
       <meta name="description" content={description} />
 
@@ -35,11 +39,23 @@ const CustomHead = ({ title, description }) => {
         content="https://res.cloudinary.com/duvrmhcdl/image/upload/v1662952705/Oscar%20Espa%C3%B1a%20-%20P%C3%A1gina%20web/Oscar-Espana-Graph.jpg"
       />
 
-      <link rel="alternate" href={URL} hrefLang="es-ec" />
-      <link rel="alternate" href={URL} hrefLang="x-default" />
+      {locales.map((locale) => (
+        <link
+          key={locale}
+          rel="alternate"
+          href={`${URL}${locale}`}
+          hrefLang={locale}
+        />
+      ))}
+      <link
+        rel="alternate"
+        href={`${URL}${defaultLocale}`}
+        hrefLang="x-default"
+      />
 
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={URL} />
+
+      <link rel="canonical" href={`${URL}${currentLocale}`} />
 
       <link rel="apple-touch-icon" href="/oscar-espana.svg" />
       <link rel="icon" href="/oscar-espana.svg" />

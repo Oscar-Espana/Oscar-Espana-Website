@@ -47,5 +47,9 @@
   "workingTogether": {
     "working": "Trabajemos",
     "together": "juntos"
+  },
+  "metadata": {
+    "title": "Oscar España - Portafolio",
+    "description": "Soy Oscar España, apasionado por el desarrollador front-end con experiencia en diseño y desarrollo de aplicaciones web y móviles. Contáctame"
   }
 }

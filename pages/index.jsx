@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import AboutMe from "../components/AboutMe";
 import CustomCursor from "../components/CustomCursor";
@@ -10,15 +11,16 @@ import Presentation from "../components/Presentation";
 import Skills from "../components/Skills";
 import Technologies from "../components/Technologies";
 import WorkTogether from "../components/WorkTogether";
+import i18nextConfig from "../next-i18next.config";
 
 export default function Home() {
+  const { t } = useTranslation("common");
   return (
     <>
       <CustomHead
-        title="Oscar España - Portafolio"
-        description="Soy Oscar España, apasionado por el desarrollador frontend con experiencia en diseño y desarrollo de aplicaciones web y móviles."
+        title={t("metadata.title")}
+        description={t("metadata.description")}
       />
-
       <CustomCursor />
       <Navbar />
       <Hero />
