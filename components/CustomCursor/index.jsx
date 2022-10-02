@@ -16,7 +16,7 @@ const CustomCursor = () => {
   return (
     <div
       id="cursor"
-      className="fixed bg-primary w-4 h-4 -left-4 -top-2 rounded-full z-10"
+      className="fixed hidden md:block bg-primary w-4 h-4 -left-4 -top-2 rounded-full z-[100]"
     ></div>
   );
 };
