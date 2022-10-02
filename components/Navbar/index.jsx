@@ -1,11 +1,16 @@
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
-import React, { useEffect } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
+  const router = useRouter();
+  const locales = router.locales || [];
+  const currentLocale = router.locale;
+
   useEffect(() => {
     const showHideNav = gsap
       .from("nav", {
@@ -28,12 +33,25 @@ const Navbar = () => {
   }, []);
   return (
     <nav className="fixed w-full z-50 bg-[rgba(0,0,0,0.06)] backdrop-blur-md flex items-center py-1 md:py-3">
-      <div className="relative container m-auto text-white font-medium text-[40px] ">
+      <div className="container m-auto flex items-center text-white font-medium text-[40px] ">
         <Link href="/">
           <a>
             <span className="text-primary">O</span>E /{">"}
           </a>
         </Link>
+        <div className="flex flex-1 items-center justify-end">
+          {locales.sort().map((locale) => (
+            <Link key={locale} href="/" locale={locale}>
+              <a
+                className={`text-lg uppercase mr-2 ${
+                  currentLocale === locale && "text-primary"
+                } `}
+              >
+                {locale}
+              </a>
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   );
