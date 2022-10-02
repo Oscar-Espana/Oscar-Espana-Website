@@ -1,17 +1,16 @@
 import gsap from "gsap";
+import { useTranslation } from "next-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const presentation = `Hola, mi nombre es Oscar España 👋. Soy desarrollador frontend con
-experiencia en diseño y desarrollo de aplicaciones web y móviles. Me
-encanta aprender nuevas tecnologías, emplear tendencias de diseño y me
-enfoco en entregar un producto de calidad de acuerdo a las necesidades
-del usuario`;
-
 const Presentation = () => {
+  const { t } = useTranslation("common");
+
   const descriptionRef = useRef(null);
+
+  const presentation = t("presentation.description");
 
   useEffect(() => {
     const services = gsap.utils.selector(descriptionRef);

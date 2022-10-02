@@ -1,0 +1,51 @@
+{
+  "titlePage": "Oscar España",
+  "subTitlePage": "Front-end Developer",
+  "contactMe": "Contact me",
+  "presentation": {
+    "description": "Hello, my name is Oscar España 👋. I'm a front-end developer with experience in design and development of web and mobile applications. I love to learn new technologies, use design trends and I focus on delivering a quality product according to the user's needs."
+  },
+  "myServices": {
+    "web": "Web applications development, web sites, E - commerce",
+    "mobile": "Cross-platform mobile application development (Android and iOS)",
+    "design": "UI design of web and mobile applications"
+  },
+  "skills": {
+    "creative": "CREATIVE",
+    "efficient": "EFFICIENT",
+    "teamwork": "TEAMWORK",
+    "innovate": "INNOVATIVE",
+    "leadership": "LEADERSHIPP"
+  },
+  "technologies": {
+    "title": "My technologies"
+  },
+  "aboutMe": {
+    "about": "About",
+    "me": " me",
+    "description1": "My name is Oscar España, I am an engineer in Electronics and Information Networks graduated from the National Polytechnic School in Quito - Ecuador, I consider myself passionate about web and mobile development, and I am constantly learning new technologies.",
+    "description2": "My interest in web development started at the beginning of 2019 and since then I have never stopped learning, I have done projects for small, medium and large companies.",
+    "description3": "Throughout my professional career I have participated in projects for both Back-end and Front-end, however my specialty is Front-end development, with which I feel more comfortable. In addition, I have knowledge about interface design for both web and mobile applications using FIGMA in order to deliver a product that meets customer expectations.",
+    "description4": "I like working in a team, since I can share my knowledge with other people and I can also learn from them, allowing me to grow as a person and professional."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "items": {
+      "grupoTransoceanica": {
+        "title": "Grupo",
+        "titleEmphasys": "Transoecánica",
+        "description": "Web application destined to automate the processes carried out by flight operators with respect to flight scheduling.",
+        "technologies": "React, Next JS, MUI, Typescript, GraphQL, Redux Toolkit"
+      },
+      "bella": {
+        "titleEmphasys": "Bella",
+        "description": "Minimalistic and elegant Landing page that contains a variety of animations that are activated by scrolling.",
+        "technologies": "HTML, CSS,  Vanilla JS, GSAP, Scrolltrigger "
+      }
+    }
+  },
+  "workingTogether": {
+    "working": "Let's work",
+    "together": "together"
+  }
+}

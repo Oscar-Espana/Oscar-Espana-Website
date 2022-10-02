@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { useTranslation } from "next-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect } from "react";
 import ServiceCard from "./ServiceCard";
@@ -6,6 +7,8 @@ import ServiceCard from "./ServiceCard";
 gsap.registerPlugin(ScrollTrigger);
 
 const MyServices = () => {
+  const { t } = useTranslation("common");
+
   useEffect(() => {
     const services = gsap.utils.toArray("#services article");
 
@@ -36,15 +39,15 @@ const MyServices = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-5">
           <ServiceCard
             urlImage="/iconos/desktop.svg"
-            description="Desarrollo de aplicaciones web, sitios web, E -commerce"
+            description={t("myServices.web")}
           />
           <ServiceCard
             urlImage="/iconos/phone.svg"
-            description="Desarrollo de aplicaciones móviles  multiplataforma (Android y iOS)"
+            description={t("myServices.mobile")}
           />
           <ServiceCard
             urlImage="/iconos/layers.svg"
-            description="Diseño UI de aplicaciones web y móviles"
+            description={t("myServices.design")}
           />
         </div>
       </div>

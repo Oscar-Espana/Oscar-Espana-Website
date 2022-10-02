@@ -1,23 +1,26 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 import LinkContact from "./LinkContact";
 
 const WorkTogether = () => {
+  const { t } = useTranslation("common");
+
   return (
-    <section className="bg-black pt-24 pb-20 md:py-28 lg:pt-32 lg:pb-20">
+    <footer className="bg-black pt-24 pb-20 md:py-28 lg:pt-32 lg:pb-20">
       <div className="container grid grid-cols-12 space-y-20 md:space-y-0">
         <div className="col-span-12 md:col-span-5 flex flex-col items-center md:items-start">
           <h2 className="text-white text-center md:text-left ">
             <span className="text-gradient-primary">
-              Trabajemos <br />
+              {t("workingTogether.working")} <br />
             </span>{" "}
-            juntos
+            {t("workingTogether.together")}
           </h2>
           <a href="mailto:espaaoscar@gmail.com" className="mt-16 md:mt-24">
             <button
               className="px-12 py-3 text-xl font-medium bg-gradient-primary text-white rounded-lg cursor-pointer
            hover:animated-gradient-button"
             >
-              Contáctame
+              {t("contactMe")}
             </button>
           </a>
         </div>
@@ -42,9 +45,9 @@ const WorkTogether = () => {
         </div>
       </div>
       <p className="text-white text-center mt-20 md:mt-32">
-        © Oscar España - 2022
+        © Oscar España - {new Date().getFullYear()}
       </p>
-    </section>
+    </footer>
   );
 };
 

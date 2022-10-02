@@ -1,4 +1,5 @@
 import gsap, { Power1, Sine } from "gsap";
+import { useTranslation } from "next-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect } from "react";
 import CardPortfolio from "./CardPortfolio";
@@ -6,6 +7,8 @@ import CardPortfolio from "./CardPortfolio";
 gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
+  const { t } = useTranslation("common");
+
   useEffect(() => {
     const paneles = gsap.utils.toArray(".panel");
     paneles.forEach((panel, i) => {
@@ -80,7 +83,7 @@ const Portfolio = () => {
       <article className="bg-gradient-primary panel">
         <div className="container w-full min-h-[600px] h-screen flex flex-col  justify-center items-center">
           <h2 className="text-white text-6xl md:text-7xl lg:text-[84px]">
-            Portafolio
+            {t("portfolio.title")}
           </h2>
           <p className="text-white mt-8 text-3xl">Oscar España</p>
         </div>
@@ -90,22 +93,18 @@ const Portfolio = () => {
         className="panel bg-gray z-10 py-24 md:py-28 lg:py-32 px-4 md:px-0 space-y-14 md:space-y-20 transition-colors duration-300 ease-in-out"
       >
         <CardPortfolio
-          title="Grupo"
-          titleEmphasys="Transoecánica"
-          description="Aplicación web destinada a la automatización de procesos que
-        llevan las operadoras de vuelo con respecto a la programación de
-        vuelos."
+          title={t("portfolio.items.grupoTransoceanica.title")}
+          titleEmphasys={t("portfolio.items.grupoTransoceanica.titleEmphasys")}
+          description={t("portfolio.items.grupoTransoceanica.description")}
           imageUrl="/img/grupo-transoceanica.png"
-          technologies="React, Next JS, MUI, Typescript, GraphQL, Redux Toolkit"
+          technologies={t("portfolio.items.grupoTransoceanica.technologies")}
         />
 
         <CardPortfolio
-          titleEmphasys="Bella"
-          description="Landing Page minimaslista y elegante que contiene una gran
-          variedad de animaciones que se activan por medio del scroll.
-          Realizada usando GSAP."
+          titleEmphasys={t("portfolio.items.bella.titleEmphasys")}
+          description={t("portfolio.items.bella.description")}
           imageUrl="/img/bella.png"
-          technologies="HTML, CSS,  Vanilla JS, GSAP, Scrolltrigger "
+          technologies={t("portfolio.items.bella.technologies")}
         />
       </div>
     </section>

@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { useTranslation } from "next-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import React, { useEffect } from "react";
@@ -6,6 +7,8 @@ import React, { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+  const { t } = useTranslation("common");
+
   useEffect(() => {
     const tl = gsap.timeline();
 
@@ -50,9 +53,9 @@ const Hero = () => {
             data-color="text-darkGray"
             className="text-primary selection:bg-white selection:text-primary translate-y-48 "
           >
-            Oscar España
+            {t("titlePage")}
           </span>
-          <span className="translate-y-48"> Desarrollador Frontend</span>
+          <span className="translate-y-48">{t("subTitlePage")}</span>
         </h1>
         <div className="mt-16 overflow-hidden">
           <a href="mailto:espaaoscar@gmail.com">
@@ -60,7 +63,7 @@ const Hero = () => {
               className=" px-12 py-3 text-xl font-medium bg-gradient-primary text-white rounded-lg cursor-pointer
            hover:animated-gradient-button translate-y-24"
             >
-              Contáctame
+              {t("contactMe")}
             </button>
           </a>
         </div>

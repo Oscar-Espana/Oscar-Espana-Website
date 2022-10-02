@@ -1,0 +1,51 @@
+{
+  "titlePage": "Oscar España",
+  "subTitlePage": "Desarrollador Front-end",
+  "contactMe": "Contáctame",
+  "presentation": {
+    "description": "Hola, mi nombre es Oscar España 👋. Soy desarrollador frontend con experiencia en diseño y desarrollo de aplicaciones web y móviles. Me encanta aprender nuevas tecnologías, emplear tendencias de diseño y me enfoco en entregar un producto de calidad de acuerdo a las necesidades del usuario"
+  },
+  "myServices": {
+    "web": "Desarrollo de aplicaciones web, sitios web, E -commerce",
+    "mobile": "Desarrollo de aplicaciones móviles multiplataforma (Android y iOS)",
+    "design": "Diseño UI de aplicaciones web y móviles"
+  },
+  "skills": {
+    "creative": "CREATIVO",
+    "efficient": "EFICIENTE",
+    "teamwork": "TRABAJO EN EQUIPO",
+    "innovate": "INNOVADOR",
+    "leadership": "LIDERAZGO"
+  },
+  "technologies": {
+    "title": "Mis tecnologías"
+  },
+  "aboutMe": {
+    "about": "Acerca",
+    "me": " de mi",
+    "description1": "Mi nombre es Oscar España, soy ingeniero en Electrónica y Redes de Información graduado de la Escuela Politécnica Nacional en Quito - Ecuador, me considero un apasionado del desarrollo web y móvil, y constantemente me encuentro aprendiendo nuevas tecnologías.",
+    "description2": "Mi interés por desarrollo web comenzó a inicios del 2019 y desde ese momento nunca he dejado de aprender, he llegado a realizar proyectos para pequeñas, medianas y grandes empresas.",
+    "description3": "A lo largo de mi carrera profesional he participado en proyectos tanto para Backend y Frontend, sin embargo mi especialidad es del desarrollo Frontend, con la cual me siento mas cómodo. Además, tengo conocimientos sobre el diseño de interfaces tanto para aplicaciones web y móviles usando FIGMA con el fin de entregar un producto que cumplan las expectativas de los clientes.",
+    "description4": "Me gusta trabajar en equipo, ya que puedo compartir mis conocimientos con otras personas y además puedo aprender de ellos, permitiéndome crecer como persona y profesional."
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "items": {
+      "grupoTransoceanica": {
+        "title": "Grupo",
+        "titleEmphasys": "Transoecánica",
+        "description": "Aplicación web destinada a la automatización de procesos que llevan las operadoras de vuelo con respecto a la programación de vuelos.",
+        "technologies": "React, Next JS, MUI, Typescript, GraphQL, Redux Toolkit"
+      },
+      "bella": {
+        "titleEmphasys": "Bella",
+        "description": "Minimaslista y elegante Landing page que contiene una gran variedad de animaciones que se activan por medio del scroll.",
+        "technologies": "HTML, CSS,  Vanilla JS, GSAP, Scrolltrigger "
+      }
+    }
+  },
+  "workingTogether": {
+    "working": "Trabajemos",
+    "together": "juntos"
+  }
+}

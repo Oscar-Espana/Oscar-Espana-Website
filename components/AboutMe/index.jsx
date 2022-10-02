@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { useTranslation } from "next-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
@@ -7,6 +8,7 @@ import { useWindowResize } from "../../hooks/useWindowsResize";
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
+  const { t } = useTranslation("common");
   const size = useWindowResize();
 
   const aboutMeRef = useRef(null);
@@ -42,42 +44,23 @@ const AboutMe = () => {
       <div ref={aboutMeSectionRef} className="container grid grid-cols-12 ">
         <div className="col-span-12 md:col-span-5">
           <h2 ref={titleRef}>
-            <span className="text-gradient-primary ">Acerca</span> de mi
+            <span className="text-gradient-primary ">{t("aboutMe.about")}</span>
+            {t("aboutMe.me")}
           </h2>
         </div>
         <div className="col-span-12  md:col-span-7 md:col-start-6 flex flex-col justify-center">
           <div className="space-y-3 mb-16 mt-6 md:mt-0 md:mb-28">
-            <p className="text-[18px]">
-              Mi nombre es Oscar España, soy ingeniero en Electrónica y Redes de
-              Información graduado de la Escuela Politécnica Nacional en Quito -
-              Ecuador, me considero un apasionado del desarrollo web y móvil, y
-              constantemente me encuentro aprendiendo nuevas tecnologías.
-            </p>
-            <p className="text-[18px]">
-              Mi interés por desarrollo web comenzó a inicios del 2019 y desde
-              ese momento nunca he dejado de aprender, he llegado a realizar
-              proyectos para pequeñas, medianas y grandes empresas.
-            </p>
-            <p className="text-[18px]">
-              A lo largo de mi carrera profesional he participado en proyectos
-              tanto para Backend y Frontend, sin embargo mi especialidad es del
-              desarrollo Frontend, con la cual me siento mas cómodo. Además,
-              tengo conocimientos sobre el diseño de interfaces tanto para
-              aplicaciones web y móviles usando FIGMA con el fin de entregar un
-              produto que cumplan las espectativas de los clientes.
-            </p>
-            <p className="text-[17px]">
-              Me gusta trabajar en equipo, ya que puedo compartir mis
-              conocimientos con otras personas y además puedo aprender de ellos,
-              permitiéndome crecer como persona y profesional.
-            </p>
+            <p className="text-[18px]">{t("aboutMe.description1")}</p>
+            <p className="text-[18px]">{t("aboutMe.description2")}</p>
+            <p className="text-[18px]">{t("aboutMe.description3")}</p>
+            <p className="text-[17px]">{t("aboutMe.description4")}</p>
           </div>
 
           <picture className="group hover:scale-x-95 transition-transform duration-700">
             <Image
               className="group-hover:scale-[1.2] transition-transform duration-700 ease-in-out"
               src="/img/about-me.jpg"
-              alt="Acerca de mi"
+              alt={`${t("aboutMe.about")}${t("aboutMe.me")}`}
               width={590}
               height={466}
               layout="responsive"

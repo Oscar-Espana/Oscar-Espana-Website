@@ -1,13 +1,13 @@
 import gsap from "gsap";
+import { useTranslation } from "next-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect } from "react";
-import { useWindowResize } from "../../hooks/useWindowsResize";
 import ItemSkill from "./ItemSkill";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
-  const size = useWindowResize();
+  const { t } = useTranslation("common");
 
   useEffect(() => {
     let totalWidth = 0;
@@ -38,11 +38,11 @@ const Skills = () => {
   return (
     <section id="skills" className="bg-primary overflow-hidden">
       <div className="relative -left-[350px] h-44 lg:h-48 flex items-center">
-        <ItemSkill skill="CREATIVO" />
-        <ItemSkill skill="EFICIENTE" />
-        <ItemSkill skill="TRABAJO EN EQUIPO" />
-        <ItemSkill skill="INNOVADOR" />
-        <ItemSkill skill="LIDERAZGO" />
+        <ItemSkill skill={t("skills.creative")} />
+        <ItemSkill skill={t("skills.efficient")} />
+        <ItemSkill skill={t("skills.teamwork")} />
+        <ItemSkill skill={t("skills.innovate")} />
+        <ItemSkill skill={t("skills.leadership")} />
       </div>
     </section>
   );
