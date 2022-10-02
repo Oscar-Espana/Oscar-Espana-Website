@@ -1,3 +1,4 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import AboutMe from "../components/AboutMe";
 import CustomCursor from "../components/CustomCursor";
 import CustomHead from "../components/CustomHead";
@@ -30,4 +31,12 @@ export default function Home() {
       <WorkTogether />
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }
