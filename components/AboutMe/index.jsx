@@ -53,7 +53,7 @@ const AboutMe = () => {
             <p className="text-[18px]">{t("aboutMe.description1")}</p>
             <p className="text-[18px]">{t("aboutMe.description2")}</p>
             <p className="text-[18px]">{t("aboutMe.description3")}</p>
-            <p className="text-[17px]">{t("aboutMe.description4")}</p>
+            <p className="text-[18px]">{t("aboutMe.description4")}</p>
           </div>
 
           <picture className="group hover:scale-x-95 transition-transform duration-700">
