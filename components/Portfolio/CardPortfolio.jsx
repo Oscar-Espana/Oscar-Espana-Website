@@ -27,6 +27,7 @@ const CardPortfolio = ({
               alt={`${title} ${titleEmphasys}`}
               width={640}
               height={365}
+              quality={80}
               layout="responsive"
             />
           </figure>

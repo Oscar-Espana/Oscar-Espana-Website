@@ -31,6 +31,12 @@
   "portfolio": {
     "title": "Portfolio",
     "items": {
+      "oscarEspana": {
+        "title": "Portfolio - ",
+        "titleEmphasys": "Oscar España",
+        "description": "Personal web page which contains basic information, contact information, as well as information about professional services and projects carried out.",
+        "technologies": "React, Next JS, Tailwind CSS, GSAP, Scrolltrigger"
+      },
       "grupoTransoceanica": {
         "title": "Grupo",
         "titleEmphasys": "Transoecánica",

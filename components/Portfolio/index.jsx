@@ -93,6 +93,13 @@ const Portfolio = () => {
         className="panel bg-gray z-10 py-24 md:py-28 lg:py-32 px-4 md:px-0 space-y-14 md:space-y-20 transition-colors duration-300 ease-in-out"
       >
         <CardPortfolio
+          title={t("portfolio.items.oscarEspana.title")}
+          titleEmphasys={t("portfolio.items.oscarEspana.titleEmphasys")}
+          description={t("portfolio.items.oscarEspana.description")}
+          imageUrl="/img/oscar-espana.png"
+          technologies={t("portfolio.items.oscarEspana.technologies")}
+        />
+        <CardPortfolio
           title={t("portfolio.items.grupoTransoceanica.title")}
           titleEmphasys={t("portfolio.items.grupoTransoceanica.titleEmphasys")}
           description={t("portfolio.items.grupoTransoceanica.description")}
