@@ -47,6 +47,11 @@
         "titleEmphasys": "Bella",
         "description": "Minimaslista y elegante Landing page que contiene una gran variedad de animaciones que se activan por medio del scroll.",
         "technologies": "HTML, CSS,  Vanilla JS, GSAP, Scrolltrigger "
+      },
+      "delivery": {
+        "titleEmphasys": "Deliveroo",
+        "description": "Clon de una aplicación de entrega de comida a domicilio, en donde encontrarás restaurantes y productos que puedes solicitar.",
+        "technologies": "React Native, Tailwind CSS, Redux Toolkit, Sanity.io "
       }
     }
   },

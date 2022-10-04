@@ -113,6 +113,13 @@ const Portfolio = () => {
           imageUrl="/img/bella.png"
           technologies={t("portfolio.items.bella.technologies")}
         />
+
+        <CardPortfolio
+          titleEmphasys={t("portfolio.items.delivery.titleEmphasys")}
+          description={t("portfolio.items.delivery.description")}
+          imageUrl="/img/delivery.png"
+          technologies={t("portfolio.items.delivery.technologies")}
+        />
       </div>
     </section>
   );
