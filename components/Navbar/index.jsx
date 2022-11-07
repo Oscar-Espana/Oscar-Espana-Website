@@ -35,21 +35,23 @@ const Navbar = () => {
     <nav className="fixed w-full z-50 bg-[rgba(0,0,0,0.06)] backdrop-blur-md flex items-center py-1 md:py-3">
       <div className="container m-auto flex items-center text-white font-medium text-[40px] ">
         <Link href="/">
-          <a>
-            <span className="text-primary">O</span>E /{">"}
-          </a>
+
+          <span className="text-primary">O</span>E /{">"}
+
         </Link>
         <div className="flex flex-1 items-center justify-end">
           {locales.sort().map((locale) => (
-            <Link key={locale} href="/" locale={locale}>
-              <a
-                className={`text-lg uppercase mr-2 ${
-                  currentLocale === locale && "text-primary"
-                } `}
-              >
-                {locale}
-              </a>
-            </Link>
+            (<Link
+              key={locale}
+              href="/"
+              locale={locale}
+              className={`text-lg uppercase mr-2 ${
+                currentLocale === locale && "text-primary"
+              } `}>
+
+              {locale}
+
+            </Link>)
           ))}
         </div>
       </div>
