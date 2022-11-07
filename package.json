@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.0.2",
     "gsap": "^3.10.2",
     "next": "^13.0.2",
     "next-i18next": "^12.1.0",
