@@ -74,7 +74,6 @@ const Hero = () => {
             src="/iconos/scroll-down.svg"
             width={56}
             height={56}
-            layout="fixed"
             alt="Scroll Down"
             className="opacity-0"
           />

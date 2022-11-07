@@ -12,7 +12,7 @@ const Card = ({ description, urlImage }) => {
         width={56}
         height={56}
         alt={description}
-        layout="fixed"
+        className="m-auto"
       />
       <p className="text-[22px] md:text-[26px] font-medium text-center mt-12 leading-tight">
         {description}

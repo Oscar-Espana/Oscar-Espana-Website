@@ -63,7 +63,11 @@ const AboutMe = () => {
               alt={`${t("aboutMe.about")}${t("aboutMe.me")}`}
               width={590}
               height={466}
-              layout="responsive"
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
               quality={100}
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN88B8AAsUB4ZtvXtIAAAAASUVORK5CYII="

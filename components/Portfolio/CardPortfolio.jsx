@@ -28,7 +28,11 @@ const CardPortfolio = ({
               width={640}
               height={365}
               quality={80}
-              layout="responsive"
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
             />
           </figure>
           <p className="tech-portfolio text-[15px] md:text-base mt-5 md:mt-10 text-violet hover:text-gradient-violet text-right ">
