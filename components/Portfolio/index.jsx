@@ -1,7 +1,7 @@
 import gsap, { Power1, Sine } from "gsap";
 import { useTranslation } from "next-i18next";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import CardPortfolio from "./CardPortfolio";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,19 +10,8 @@ const Portfolio = () => {
   const { t } = useTranslation("common");
 
   useEffect(() => {
-    const paneles = gsap.utils.toArray(".panel");
-    paneles.forEach((panel, i) => {
-      if (i < paneles.length - 1) {
-        ScrollTrigger.create({
-          trigger: panel,
-          start: "top top",
-          pin: true,
-          pinSpacing: false,
-        });
-      }
-    });
-
     const articlesPortfolio = gsap.utils.toArray(".panel article");
+
     articlesPortfolio.forEach((article) => {
       gsap.to(article, {
         scrollTrigger: {
@@ -64,17 +53,29 @@ const Portfolio = () => {
       const h3 = article.querySelector("h3");
       const figure = article.querySelector("figure");
 
-      gsap.from(figure, {
+      let tl2 = gsap.timeline({
         scrollTrigger: {
           trigger: h3,
           start: "bottom bottom",
           end: "bottom bottom-=50%",
           scrub: true,
         },
-        autoAlpha: 0,
-        yPercent: 50,
-        ease: Sine.easeOut,
+        defaults: {
+          ease: Sine.easeOut,
+        },
       });
+
+      tl2.fromTo(
+        figure,
+        {
+          opacity: 0,
+          yPercent: 50,
+        },
+        {
+          opacity: 1,
+          yPercent: 0,
+        }
+      );
     });
   }, []);
 
