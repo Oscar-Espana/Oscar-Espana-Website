@@ -30,7 +30,6 @@ const WorkTogether = () => {
               contactInfo="espaaoscar@gmail.com"
               href="mailto:espaaoscar@gmail.com"
             />
-            <LinkContact contactInfo="+593990121123" href="tel:+593990121123" />
             <LinkContact
               contactInfo="LinkedIn"
               href="https://linkedin.com/in/oscar-españa-56aa77172"

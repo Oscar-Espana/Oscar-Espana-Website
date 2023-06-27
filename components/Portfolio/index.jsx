@@ -50,6 +50,11 @@ const Portfolio = () => {
         color: "rgb(160, 160, 160)",
       });
 
+      const linkPortfolio = article.getElementsByClassName("link-portfolio")[0];
+      tl.to(linkPortfolio, {
+        color: "rgb(160, 160, 160)",
+      });
+
       const h3 = article.querySelector("h3");
       const figure = article.querySelector("figure");
 
@@ -99,6 +104,7 @@ const Portfolio = () => {
           description={t("portfolio.items.oscarEspana.description")}
           imageUrl="/img/oscar-espana.png"
           technologies={t("portfolio.items.oscarEspana.technologies")}
+          linkProject={"https://github.com/Oscar-Espana/Oscar-Espana-Website"}
         />
         <CardPortfolio
           title={t("portfolio.items.grupoTransoceanica.title")}
@@ -113,6 +119,9 @@ const Portfolio = () => {
           description={t("portfolio.items.bella.description")}
           imageUrl="/img/bella.png"
           technologies={t("portfolio.items.bella.technologies")}
+          linkProject={
+            "https://github.com/Oscar-Espana/Bella-Animated-Landing-Page"
+          }
         />
 
         <CardPortfolio
@@ -120,6 +129,7 @@ const Portfolio = () => {
           description={t("portfolio.items.delivery.description")}
           imageUrl="/img/delivery.png"
           technologies={t("portfolio.items.delivery.technologies")}
+          linkProject={"https://github.com/Oscar-Espana/Delivery-App"}
         />
       </div>
     </section>

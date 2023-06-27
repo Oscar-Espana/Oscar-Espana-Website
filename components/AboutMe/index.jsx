@@ -56,7 +56,7 @@ const AboutMe = () => {
             <p className="text-[18px]">{t("aboutMe.description4")}</p>
           </div>
 
-          <picture className="group hover:scale-x-95 transition-transform duration-700">
+          <picture className="group overflow-hidden transition-transform duration-700">
             <Image
               className="group-hover:scale-[1.2] transition-transform duration-700 ease-in-out"
               src="/img/about-me.jpg"
