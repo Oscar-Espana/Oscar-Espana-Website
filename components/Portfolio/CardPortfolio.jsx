@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 const CardPortfolio = ({
   title = "",
@@ -9,6 +10,7 @@ const CardPortfolio = ({
   technologies,
   linkProject,
 }) => {
+  const { t } = useTranslation("common");
   return (
     <article className="container bg-white rounded-3xl text-black transition-colors duration-300 ease-in-out ">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-5 py-16 md:py-24 lg:py-28">
@@ -30,7 +32,7 @@ const CardPortfolio = ({
             >
               <div className="flex flex-col overflow-hidden">
                 <p className="group-hover:text-primary transition-colors ease-in-out duration-300 ">
-                  Ver proyecto
+                  {t("portfolio.viewProject")}
                 </p>
                 <div className="mt-[2px] h-[1px] bg-primary -translate-x-full group-hover:translate-x-0 transition-transform ease-in-out duration-300 "></div>
               </div>

@@ -30,28 +30,41 @@
   },
   "portfolio": {
     "title": "Portfolio",
+    "viewProject": "View Project",
     "items": {
       "oscarEspana": {
         "title": "Portfolio - ",
         "titleEmphasys": "Oscar España",
-        "description": "Personal web page which contains basic information, contact information, as well as information about professional services and projects carried out.",
+        "description": "A personal website where you will find key information about me, including work experience, notable projects, and contact details. It showcases an attractive, captivating, and minimalist design.",
         "technologies": "React, Next JS, Tailwind CSS, GSAP, Scrolltrigger"
       },
       "grupoTransoceanica": {
-        "title": "Grupo",
-        "titleEmphasys": "Transoecánica",
-        "description": "Web application destined to automate the processes carried out by flight operators with respect to flight scheduling.",
+        "title": "Group",
+        "titleEmphasys": "Transoceanica",
+        "description": "A web application designed to automate key processes related to flight scheduling for airline operators, enhancing efficiency and organization in the aviation industry.",
         "technologies": "React, Next JS, MUI, Typescript, GraphQL, Redux Toolkit"
       },
       "bella": {
         "titleEmphasys": "Bella",
-        "description": "Minimalistic and elegant Landing page that contains a variety of animations that are activated by scrolling.",
-        "technologies": "HTML, CSS,  Vanilla JS, GSAP, Scrolltrigger "
+        "description": "A minimalist and elegant landing page that captivates with its sophisticated design and a wide variety of animations that seamlessly unfold while scrolling.",
+        "technologies": "HTML, CSS, Vanilla JS, GSAP, Scrolltrigger"
+      },
+      "formikMui": {
+        "title": "Forms with MUI",
+        "titleEmphasys": "and Formik",
+        "description": "A collection of examples demonstrating the power of Formik in handling forms of various categories. This project includes multiple reusable components, facilitating development in future projects.",
+        "technologies": "React, Next JS, MUI (Material UI), Formik, Typescript"
+      },
+      "fitbaFood": {
+        "title": "Fitba",
+        "titleEmphasys": "Food",
+        "description": "A landing page that highlights the delicious menu of healthy food and exclusive additional services offered. Discover a unique and complete gastronomic experience with Fitba Food.",
+        "technologies": "React, Next JS, MUI (Material UI), Framer Motion, Typescript"
       },
       "delivery": {
         "titleEmphasys": "Deliveroo",
-        "description": "Clone of a food delivery application, where you will find restaurants and products that you can order.",
-        "technologies": "React Native, Tailwind CSS, Redux Toolkit, Sanity.io "
+        "description": "A clone of a popular food delivery application, where you will discover a wide selection of high-quality restaurants and products to satisfy all your culinary cravings.",
+        "technologies": "React Native, Tailwind CSS, Redux Toolkit, Sanity.io"
       }
     }
   },

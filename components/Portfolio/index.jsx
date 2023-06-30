@@ -113,14 +113,29 @@ const Portfolio = () => {
           imageUrl="/img/grupo-transoceanica.png"
           technologies={t("portfolio.items.grupoTransoceanica.technologies")}
         />
-
+        <CardPortfolio
+          title={t("portfolio.items.formikMui.title")}
+          titleEmphasys={t("portfolio.items.formikMui.titleEmphasys")}
+          description={t("portfolio.items.formikMui.description")}
+          imageUrl="/img/formik-mui.png"
+          technologies={t("portfolio.items.formikMui.technologies")}
+          linkProject={"https://formik-mui-examples.vercel.app"}
+        />
+        <CardPortfolio
+          title={t("portfolio.items.fitbaFood.title")}
+          titleEmphasys={t("portfolio.items.fitbaFood.titleEmphasys")}
+          description={t("portfolio.items.fitbaFood.description")}
+          imageUrl="/img/fitba-food.png"
+          technologies={t("portfolio.items.fitbaFood.technologies")}
+          linkProject={"https://fitbafood.vercel.app"}
+        />
         <CardPortfolio
           titleEmphasys={t("portfolio.items.bella.titleEmphasys")}
           description={t("portfolio.items.bella.description")}
           imageUrl="/img/bella.png"
           technologies={t("portfolio.items.bella.technologies")}
           linkProject={
-            "https://github.com/Oscar-Espana/Bella-Animated-Landing-Page"
+            "https://oscar-espana.github.io/Bella-Animated-Landing-Page/"
           }
         />
 
